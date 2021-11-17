@@ -1,3 +1,5 @@
+// Nombre: PEDRO, Apellidos: GALLEGO LÓPEZ, DNI/pasaporte: 48261534-J (IG GIM+GIADE, curso 21-22)
+
 // *********************************************************************
 // **
 // ** Informática Gráfica, curso 2020-21

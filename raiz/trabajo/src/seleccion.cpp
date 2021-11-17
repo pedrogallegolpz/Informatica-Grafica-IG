@@ -1,3 +1,5 @@
+// Nombre: PEDRO, Apellidos: GALLEGO LÓPEZ, DNI/pasaporte: 48261534-J (IG GIM+GIADE, curso 21-22)
+
 #include "ig-aux.h"
 #include "tuplasg.h"
 #include "practicas.h"

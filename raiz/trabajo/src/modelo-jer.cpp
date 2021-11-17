@@ -1,3 +1,5 @@
+// Nombre: PEDRO, Apellidos: GALLEGO LÓPEZ, DNI/pasaporte: 48261534-J (IG GIM+GIADE, curso 21-22)
+
 
 #include "ig-aux.h"
 #include "matrices-tr.h"
@@ -153,7 +155,6 @@ Dron::Dron(){
     for(unsigned i=0; i<brazo.size(); i++){
         agregar(EntradaNGE(brazo[i]));
     }
-    agregar(EntradaNGE(MAT_Escalado(1,1,1)));
 
     // Creamos el cuerpo del Dron
     CuerpoDron *d = new CuerpoDron();

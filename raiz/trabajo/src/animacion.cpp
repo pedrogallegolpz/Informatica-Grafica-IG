@@ -1,3 +1,4 @@
+// Nombre: PEDRO, Apellidos: GALLEGO LÓPEZ, DNI/pasaporte: 48261534-J (IG GIM+GIADE, curso 21-22)
 #include "animacion.h"
 
 using namespace std::chrono ;
