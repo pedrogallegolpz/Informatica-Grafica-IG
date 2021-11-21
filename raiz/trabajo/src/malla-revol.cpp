@@ -102,8 +102,8 @@ Cilindro::Cilindro(
    perfil.push_back(base_inf);
 
    // Puntos laterales del perfil que no son tapas
-   for(int i=0; i<num_verts_per-2; i++){     // Restamos dos por el vértice de la tapa y de la base
-      Tupla3f p(1,i/(num_verts_per-3),0);
+   for(unsigned i=0; i<num_verts_per-2; i++){     // Restamos dos por el vértice de la tapa y de la base
+      Tupla3f p(1,((float) i)/((float) (num_verts_per-3)),0);
       perfil.push_back(p);
    }
 
@@ -129,7 +129,7 @@ Cono::Cono(
    perfil.push_back(base_inf);
 
    for(int i=0; i<num_verts_per-1; i++){
-      Tupla3f p(1-i/(num_verts_per-2),i/(num_verts_per-2),0);
+      Tupla3f p(1-((float) i)/((float) num_verts_per-2),((float) i)/((float) num_verts_per-2),0);
       perfil.push_back(p);
    }
 

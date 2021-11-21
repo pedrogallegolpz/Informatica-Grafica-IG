@@ -284,3 +284,167 @@ void DronCarga::actualizarEstadoParametro( const unsigned iParam, const float t_
 }
 
 
+
+////////////////////////////////////////////
+//
+//  EJER 1 EXTRAS
+//
+////////////////////////////////////////////
+
+
+ConoPunta::ConoPunta(){
+    
+
+    // Lo subimos de altura de forma que la carga se quede en el suelo (y=0)
+
+    agregar(EntradaNGE(MAT_Traslacion(0,1.3,0)));
+
+    // Creamos la carga
+    Cono * cono = new Cono(4,10);
+    agregar(EntradaNGE(MAT_Escalado(0.14,0.25,0.14)));
+    agregar(EntradaNGE(cono));
+
+}
+
+
+
+
+GrafoEstrellaX::GrafoEstrellaX(unsigned n){
+    assert(n>1);
+    
+    // Circuito
+    rotacion = leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion(0,0,1,0))));
+
+    // Ponemos "recta" la figura
+    agregar(EntradaNGE(MAT_Rotacion(360.0/((float) n),{1,0,0})));
+
+    // Creamos la carga
+    ConoPunta * cono = new ConoPunta();
+    for(unsigned i=0; i<n; i++){
+        agregar(EntradaNGE(MAT_Rotacion(360.0/((float) n),{1,0,0})));
+
+        // Creamos la carga
+        agregar(EntradaNGE(cono));
+    }
+
+    agregar(EntradaNGE(MAT_Escalado(1,2.6,2.6)));
+    agregar(EntradaNGE(MAT_Rotacion(270,{0,1,0})));
+    agregar(EntradaNGE(MAT_Rotacion(90,{0,0,1})));
+    agregar(EntradaNGE(MAT_Traslacion(-0.5,-0.5,0)));
+
+    // Creamos el Dron
+    EstrellaZ * star = new EstrellaZ(n);
+    agregar(EntradaNGE(star));
+}
+
+unsigned GrafoEstrellaX::leerNumParametros() const{
+    return 1;
+}
+
+void GrafoEstrellaX::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros());
+    float v1;
+    float vel_angular;
+    switch(iParam){
+        case 0:
+            vel_angular = 2.5;
+            v1 = 360*vel_angular*t_sec;
+            *rotacion = MAT_Rotacion(v1,1,0,0);
+            break;
+    }
+    
+    
+}
+
+
+
+////////////////////////////////////////////
+//
+//  EJER 2 EXTRAS
+//
+////////////////////////////////////////////
+
+CaraCubo::CaraCubo(){
+   
+    //Subimos
+    agregar(EntradaNGE(MAT_Traslacion(0,1,0)));
+
+    agregar(EntradaNGE(MAT_Escalado(2,2,2)));
+    agregar(EntradaNGE(MAT_Traslacion(-0.5,0,-0.5)));
+
+    // Creamos el Dron
+    RejillaY * rejilla = new RejillaY(5,5);
+    agregar(EntradaNGE(rejilla));
+
+    // Posicionamos encima de la rejilla
+    agregar(EntradaNGE(MAT_Traslacion(0.5,0,0.5)));
+    agregar(EntradaNGE(MAT_Escalado(0.2,0.2,0.2)));
+
+
+    Cubo * cubo = new Cubo();
+
+    rotacion = leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion(0,{1,0,0}))));
+    agregar(EntradaNGE(MAT_Escalado(1,1.5,1)));
+
+    agregar(EntradaNGE(MAT_Traslacion(0,0.5,0)));
+    agregar(EntradaNGE(MAT_Escalado(0.5,0.5,0.5)));
+
+    agregar(EntradaNGE(cubo));
+
+    
+}
+
+unsigned CaraCubo::leerNumParametros() const{
+    return 1;
+}
+
+void CaraCubo::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros());
+    float v1;
+    float vel_angular;
+    switch(iParam){
+        case 0:
+            vel_angular = 0.5;
+            v1 = 360*vel_angular*t_sec;
+            *rotacion = MAT_Rotacion(v1,0,1,0);
+            break;
+    }
+    
+    
+}
+
+
+GrafoCubos::GrafoCubos(){
+   
+    // Creamos la cara
+    cara = new CaraCubo();
+
+    for(int i=0; i<4; i++){
+        agregar(EntradaNGE(MAT_Rotacion(180,{0,0,1})));
+        agregar(EntradaNGE(cara));
+    }
+
+    agregar(EntradaNGE(MAT_Rotacion(90,{1,0,0})));
+
+
+    for(int i=0; i<4; i++){
+        agregar(EntradaNGE(MAT_Rotacion(90,{0,0,1})));
+        agregar(EntradaNGE(cara));
+    }
+
+}
+
+unsigned GrafoCubos::leerNumParametros() const{
+    return 1;
+}
+
+void GrafoCubos::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros()); 
+    switch(iParam){
+        case 0:
+            cara->actualizarEstadoParametro(0,t_sec);
+            break;
+    }
+    
+    
+}

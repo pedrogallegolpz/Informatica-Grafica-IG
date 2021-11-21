@@ -12,6 +12,7 @@
 #include "tuplasg.h"
 #include "malla-ind.h"   // declaración de 'ContextoVis'
 #include "lector-ply.h"
+#define PI 3.14159265
 
 
 // *****************************************************************************
@@ -87,7 +88,7 @@ void MallaInd::visualizarGL( ContextoVis & cv )
    // guardar el color previamente fijado
    const Tupla4f color_previo = leerFijarColVertsCauce( cv );
 
-   // COMPLETADO: práctica 1: si el puntero 'array_verts' es nulo, crear el objeto ArrayVerts
+   // COMPLETADO: práctica 1: si el puntero ' ' es nulo, crear el objeto ArrayVerts
    //   * en el constructor se dan los datos de la tabla de coordenadas de vértices (tabla 'vertices')
    //   * después hay que invocar a 'fijarIndices', usando el formato y datos de la tabla de triángulos ('triangulos')
    //   * si las tablas 'col_ver', 'cc_tt_ver' o 'nor_ver' no están vacías, hay que invocar los métodos 
@@ -288,7 +289,7 @@ CuboColores::CuboColores()
       } ;
 
    // Colores
-   for(int i = 0; i<vertices.size(); i++){
+   for(unsigned i = 0; i<vertices.size(); i++){
       float a,b,c;
       a=(vertices[i][0]+1)/2;
       b=(vertices[i][1]+1)/2;
@@ -297,6 +298,235 @@ CuboColores::CuboColores()
       col_ver.push_back({a,b,c});
    }
 }
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'EstrellaZ'
+
+EstrellaZ::EstrellaZ(unsigned n)
+:  MallaInd( "EstrellaZ" )
+{
+   assert(n>1);
+   
+   vertices.push_back({0.5,0.5,0});
+   for(unsigned i=0; i<2*n; i++){
+      if(i%2==0){
+         vertices.push_back({0.5+cos(2*PI*i/(2*n))/2, 0.5+sin(2*PI*i/(2*n))/2, 0});
+      }else{
+         vertices.push_back({0.5+cos(2*PI*i/(2*n))/6, 0.5+sin(2*PI*i/(2*n))/6, 0});
+      }
+   }
+
+   // Triángulos
+   for(unsigned i=1; i<2*n; i++){
+      triangulos.push_back({i,i+1,0});
+   }
+   triangulos.push_back({2*n,1,0});
+
+   // Colores
+   col_ver.push_back({1,1,1});
+   for(unsigned i = 1; i<vertices.size(); i++){
+      col_ver.push_back(vertices[i]);
+   }
+
+   
+}
+
+// -----------------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'CasaX'
+
+CasaX::CasaX()
+:  MallaInd( "CasaX" )
+{   
+   vertices =
+      {  { 0, 0, 0 }, // 0
+         { 0, 0, 0.8 }, // 1
+         { 0, 0.8, 0 }, // 2
+         { 0, 0.8, 0.8 }, // 3
+         { +1.0, 0, 0 }, // 4
+         { +1.0, 0, 0.8 }, // 5
+         { +1.0, 0.8, 0 }, // 6
+         { +1.0, 0.8, 0.8 }, // 7
+         {  0, 1., 0.4},
+         { 1, 1., 0.4}
+      } ;
+
+
+   triangulos =
+      {  {0,1,3}, {0,3,2}, // X-
+         {4,7,5}, {4,6,7}, // X+ (+4)
+
+         {6,2,8},{8,9,6},  // Tejado frontal
+         {3,7,8},{8,7,9},  // Tejado trasero
+
+         {2,3,8},{6,7,9},  // Tapas triangulares
+
+         {0,6,4}, {0,2,6}, // Z-
+         {1,5,7}, {1,7,3}  // Z+ (+1)
+      } ;
+
+   // Colores
+   for(unsigned i = 0; i<vertices.size(); i++){
+      col_ver.push_back(vertices[i]);
+   }
+   
+}
+
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'MallaTriangulo.'
+
+MallaTriangulo::MallaTriangulo()
+:  MallaInd( "MallaTriangulo" )
+{   
+   vertices = {{ 0.5, 0, 0 },  {0,sqrt(2), 0}, {-0.5,0,0}} ;
+   triangulos = {{0,1,2}} ;
+}
+
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'MallaCuadrado'
+
+MallaCuadrado::MallaCuadrado()
+:  MallaInd( "MallaCuadrado" )
+{   
+   vertices =
+      {  { -1, -1, 0 }, // 0
+         { 1, -1, 0 }, // 1
+         { 1, 1, 0 }, // 2
+         { -1, 1, 0 }, // 3
+      } ;
+
+   triangulos ={{0,1,2}, {0,2,3}} ;   
+}
+
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'MallaPiramideL'
+
+MallaPiramideL::MallaPiramideL()
+:  MallaInd( "MallaPiramideL" )
+{   
+   vertices ={ {0.5,1,0.5},{0,0,0},{0,0,1},{0.5,0,1},{0.5,0,0.5},{1,0,0.5},{1,0,0}};
+
+
+   triangulos =
+      {  {6,2,1},{4,3,2},{4,6,5}, // base
+      } ;
+
+   for(unsigned i=1; i<vertices.size()-1; i++){
+      triangulos.push_back({0,i,i+1});
+   }
+   triangulos.push_back({0,6,1});
+}
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'PiramideEstrellaZ'
+
+PiramideEstrellaZ::PiramideEstrellaZ(unsigned n)
+:  MallaInd( "PiramideEstrellaZ" )
+{
+   assert(n>1);
+   
+   vertices.push_back({0.5,0.5,0});
+   for(unsigned i=0; i<2*n; i++){
+      if(i%2==0){
+         vertices.push_back({0.5+cos(2*PI*i/(2*n))/2, 0.5+sin(2*PI*i/(2*n))/2, 0});
+      }else{
+         vertices.push_back({0.5+cos(2*PI*i/(2*n))/6, 0.5+sin(2*PI*i/(2*n))/6, 0});
+      }
+   }
+   vertices.push_back({0.5,0.5,0.5});
+
+
+   // Triángulos
+   for(unsigned i=1; i<2*n; i++){
+      triangulos.push_back({0,i+1,i});
+   }
+   triangulos.push_back({2*n,1,0});
+
+   for(unsigned i=1; i<2*n; i++){
+      triangulos.push_back({i,i+1,vertices.size()-1});
+   }
+   triangulos.push_back({2*n,1,vertices.size()-1});
+
+   // Colores
+   col_ver.push_back({1,1,1});
+   for(unsigned i = 1; i<vertices.size()-1; i++){
+      col_ver.push_back(vertices[i]);
+   }
+   col_ver.push_back({1,1,1});
+
+   
+}
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'RejillaY'
+
+RejillaY::RejillaY(unsigned m, unsigned n)
+:  MallaInd( "RejillaY" )
+{
+   assert(m>1 && n>1);
+   
+   for(unsigned i=0; i<m; i++){
+      for(unsigned j=0; j<n; j++){
+         vertices.push_back({i*1.0/(m-1), 0, j*1.0/(n-1)});
+      }
+   }
+
+
+   // Triángulos
+   for(unsigned i=0; i<m-1; i++){
+      for(unsigned j=0; j<n-1; j++){
+         triangulos.push_back({j+n*i,j+1+n*i,j+n*(i+1)});
+         triangulos.push_back({j+n*(i+1), j+n*(i+1)+1, j+1+n*i});
+      }
+   }
+
+   // Colores
+   for(unsigned i = 0; i<vertices.size(); i++){
+      col_ver.push_back(vertices[i]);
+   }
+
+   
+}
+
+// -----------------------------------------------------------------------------------------------
+// ****************************************************************************
+// Clase 'MallaTorre'
+
+MallaTorre::MallaTorre(unsigned n)
+:  MallaInd( "MallaTorre" )
+{
+   
+   for(unsigned i=0; i<n+1; i++){
+      vertices.push_back({0,i,0});
+      vertices.push_back({0,i,1});
+      vertices.push_back({1,i,1});
+      vertices.push_back({1,i,0});
+   }
+
+
+   // Triángulos
+   for(unsigned i=0; i<n; i++){
+      for(unsigned j=0; j<3; j++){
+         triangulos.push_back({j+i*4,1+j+i*4,j+(i+1)*4});
+         triangulos.push_back({j+1+i*4,j+1+(i+1)*4,j+(i+1)*4});
+      }
+      triangulos.push_back({3+i*4,i*4,3+(i+1)*4});
+      triangulos.push_back({i*4,(i+1)*4,3+(i+1)*4});
+   }
+   
+}
+
 
 // -----------------------------------------------------------------------------------------------
 // ****************************************************************************
@@ -351,7 +581,7 @@ Helices::Helices()
    // Triángulos
    // Como consecuencia de repetirse los vértices de las hélices
    // también se repiten algunos triángulos
-   for(int i=0; i<4; i++){
+   for(unsigned i=0; i<4; i++){
       // H+
       triangulos.push_back({0+8*i,1+8*i,2+8*i});
       triangulos.push_back({2+8*i,3+8*i,0+8*i});
@@ -373,7 +603,7 @@ Helices::Helices()
    }
 
    // Centro triangulos
-   for(int i=0; i<2; i++){
+   for(unsigned i=0; i<2; i++){
       triangulos.push_back({ 0+4*i, 3+4*i, 8+4*i});
       triangulos.push_back({ 8+4*i,11+4*i, 0+4*i});
       triangulos.push_back({ 0+4*i,11+4*i,16+4*i});
@@ -416,7 +646,7 @@ CuerpoDron::CuerpoDron()
    // Triángulos
    int num_copias = 9;
    int m=6;
-   for(int i=0; i<num_copias-1; i++){
+   for(unsigned i=0; i<num_copias-1; i++){
       for(int j=0; j<m-1; j++){
          int k = i*m+j;
 

@@ -94,5 +94,83 @@ class DronCarga : public NodoGrafoEscena
 
 };
 
+////////////////////////////////////////////
+//
+//  EJER 1 EXTRAS
+//
+////////////////////////////////////////////
+
+
+
+class ConoPunta : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        ConoPunta();
+
+};
+
+
+class GrafoEstrellaX : public NodoGrafoEscena
+{
+    private:
+        Matriz4f * rotacion;
+
+    public:
+
+        GrafoEstrellaX(unsigned n);
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+
+////////////////////////////////////////////
+//
+//  EJER 2 EXTRAS
+//
+////////////////////////////////////////////
+
+
+
+class CaraCubo : public NodoGrafoEscena
+{
+    private:
+        Matriz4f * rotacion;
+
+    public:
+
+        CaraCubo();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+class GrafoCubos : public NodoGrafoEscena
+{
+    private:
+        CaraCubo * cara;
+    public:
+
+        GrafoCubos();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+
+
+
 
 #endif 

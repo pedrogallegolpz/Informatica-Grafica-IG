@@ -65,6 +65,7 @@ void Escena::visualizarGL( ContextoVis & cv )
    //    cv.sombr_plano (true/false)              --> usar fijarModoSombrPlano (método del 'cauce')
    //    cv.modo_visu   (puntos,lineas o relleno) --> usar glPolygonMode
    cauce->fijarModoSombrPlano(cv.sombr_plano);
+   
 
    switch(cv.modo_visu){
       case ModosVisu::puntos:
@@ -166,18 +167,25 @@ Escena1::Escena1()
    // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
    objetos.push_back( new Cubo() );
 
-   // COMPLETAR: Práctica 1: creación del resto objetos de la práctica 1
+   // COMPLETADO: Práctica 1: creación del resto objetos de la práctica 1
    // Añadir objetos al vector 'objetos', con:
    //     objetos.push_back( new .... )
    // .........
    objetos.push_back( new Tetraedro() );
    objetos.push_back( new CuboColores() );
 
+   // Ejercicios extras
+   objetos.push_back( new EstrellaZ(8) );
+   objetos.push_back( new CasaX() );
+   objetos.push_back( new MallaTriangulo() );
+   objetos.push_back( new MallaCuadrado() );
+   objetos.push_back( new MallaPiramideL() );
+
    cout << "hecho." << endl << flush ;
 }
 
 // -------------------------------------------------------------------------
-// COMPLETAR: Práctica 2
+// COMPLETADO: Práctica 2
 // Añadir la implementación del constructor de la clase Escena2 para construir
 // los objetos que se indican en los guiones de las práctica 2
 // .......
@@ -187,8 +195,17 @@ Escena2::Escena2()
    using namespace std ;
    cout << "Creando objetos de escena 2 .... " << flush ;
 
+   // Ejer1 adicional
+   objetos.push_back( new PiramideEstrellaZ(8) );   
+
+   // Ejer2 adicional
+   objetos.push_back( new RejillaY(4,9) );   
+
+   // Ejer3 adicional
+   objetos.push_back( new MallaTorre(5) );   
+
    // añadir el objeto 'Cilindro' a la lista de objetos de esta escena:
-   objetos.push_back( new Cilindro(4,20) );    // DUDA: ¿Por qué sale igual poniendo 4 y poniendo 10?
+   objetos.push_back( new Cilindro(10,20) );    
 
    // añadir el objeto 'Cono' a la lista de objetos de esta escena:
    objetos.push_back( new Cono(3,20) );
@@ -221,7 +238,13 @@ Escena3::Escena3()
 
    // añadir el objeto 'C' a la lista de objetos de esta escena:
    objetos.push_back( new DronCarga() );    
-   objetos.push_back( new Dron() );    
+
+   // Ejer1 extra
+   objetos.push_back( new GrafoEstrellaX(5) );    
+
+   // Ejer2 extra
+   objetos.push_back( new GrafoCubos() );    
+
 
 
    cout << "hecho." << endl << flush ;
