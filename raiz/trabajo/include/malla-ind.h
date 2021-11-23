@@ -220,6 +220,33 @@ class Compuerta : public MallaInd
 
 
 
+ 
+// --------------------------------------------------------------------
+
+class Casa : public MallaInd
+{
+  private:
+      float altura1, altura2, ancho, largo;
+  public:
+      Casa(float h1, float h2, float w, float l);
+} ;
+
+
+
+
+ 
+// --------------------------------------------------------------------
+
+class Adosadas : public MallaInd
+{
+  private:
+      float altura1, altura2, ancho, largo;
+  public:
+      Adosadas(int n, float h1, float h2, float w, float l);
+} ;
+
+
+
 
 
 #endif

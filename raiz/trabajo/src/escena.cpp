@@ -164,6 +164,9 @@ Escena1::Escena1()
    using namespace std ;
    cout << "Creando objetos de escena 1 .... " << flush ;
 
+   // Examen ejer1
+   objetos.push_back( new Casa(1,1.5,1,1) );
+
    // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
    objetos.push_back( new Cubo() );
 
@@ -194,6 +197,9 @@ Escena2::Escena2()
 {
    using namespace std ;
    cout << "Creando objetos de escena 2 .... " << flush ;
+
+   // Examen ejer2
+   objetos.push_back( new Adosadas(5,1,1.5,1,1) );   
 
    // Ejer1 adicional
    objetos.push_back( new PiramideEstrellaZ(8) );   
@@ -235,6 +241,9 @@ Escena3::Escena3()
 {
    using namespace std ;
    cout << "Creando objetos de escena 2 .... " << flush ;
+
+   // Examen ejer3
+   objetos.push_back( new VariosCubos(8,25.0,75.0,2.0) );    
 
    // añadir el objeto 'C' a la lista de objetos de esta escena:
    objetos.push_back( new DronCarga() );    

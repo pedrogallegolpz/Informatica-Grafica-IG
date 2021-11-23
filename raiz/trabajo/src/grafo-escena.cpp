@@ -23,6 +23,8 @@
 #include "ig-aux.h"
 #include "matrices-tr.h"
 #include "grafo-escena.h"
+#include "malla-ind.h"
+#define PI 3.14159265
 
 using namespace std ;
 
@@ -231,4 +233,98 @@ bool NodoGrafoEscena::buscarObjeto
 
    // ni este nodo ni ningún hijo es el buscado: terminar
    return false ;
+}
+
+
+///////////////////////////////////
+/// EXAMEN
+
+
+CuboAux::CuboAux(float tmin, float tmax, float T){
+   
+
+
+    Cubo * cubo = new Cubo();
+
+    //rotacion = leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion((tmin+tmax)/2.0,{0,1,0}))));
+
+    agregar(EntradaNGE(MAT_Traslacion(1,0,1)));
+
+    agregar(EntradaNGE(cubo));
+
+    
+}
+
+unsigned CuboAux::leerNumParametros() const{
+    return 0;
+}
+
+void CuboAux::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros());
+    float v1;
+    float vel_angular;
+    switch(iParam){
+        case 0:
+           
+            break;
+    }
+    
+    
+}
+
+
+
+
+
+VariosCubos::VariosCubos(int n,float tmin, float tmax, float T){
+   
+   t_min = tmin;
+   t_max = tmax;
+   periodo = T;
+
+   CuboAux * cubo = new CuboAux(tmin, tmax, T);
+
+   agregar(EntradaNGE(MAT_Traslacion(-1,0,-1)));
+
+   agregar(EntradaNGE(cubo));
+
+
+   for(int i=0; i<n-1; i++){
+      agregar(EntradaNGE(MAT_Traslacion(2,0,2)));
+
+      if(i%2==0){
+         rotacion.push_back(leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion(90-(tmin+tmax)/2.0,{0,1,0})))));
+      }else{
+         rotacion.push_back(leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion(360-(90-(tmin+tmax)/2.0),{0,1,0})))));
+      }
+      agregar(EntradaNGE(cubo));
+   }
+
+    
+}
+
+unsigned VariosCubos::leerNumParametros() const{
+    return 1;
+}
+
+void VariosCubos::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros());
+    float v1;
+    float vel_angular;
+    switch(iParam){
+        case 0:
+            vel_angular = 1/periodo;
+            v1 = (t_min+t_max)/2.0 + 0.5*(t_max-t_min)*sin(2*PI*vel_angular*t_sec);
+            for(unsigned i=0; i<rotacion.size(); i++){
+               if(i%2==0){
+                  *(rotacion[i]) = MAT_Rotacion(90-v1,{0,1,0});
+               }else{
+                  *(rotacion[i]) = MAT_Rotacion(360-(90-v1),{0,1,0});
+               }
+            }
+            
+            break;
+    }
+    
+    
 }

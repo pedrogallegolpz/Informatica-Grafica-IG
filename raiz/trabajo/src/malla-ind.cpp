@@ -712,3 +712,77 @@ Compuerta::Compuerta()
 
 // -----------------------------------------------------------------------------------------------
 
+// ****************************************************************************
+// Clase 'Casa'
+
+Casa::Casa(float h1, float h2, float w, float l)
+:  MallaInd( "Casa" )
+{
+   altura1=h1;
+   altura2=h2;
+   ancho=w;
+   largo=l;
+
+
+   vertices = {   {-w/2.0,0,0},{-w/2.0,0,l},{w/2.0,0, l},{w/2.0,0,0},
+                  {-w/2.0,h1,0},{-w/2.0,h1,l},{w/2.0,h1, l},{w/2.0,h1,0},
+                  {0,h2,0},{0,h2,1}    };
+
+
+   // Triángulos
+   triangulos={
+                  {0,1,4},{1,5,4},
+                  {2,3,6},{3,7,6},
+                  {4,5,8},{5,8,9},
+                  {6,7,9},{7,8,9}   };
+   
+   
+}
+
+
+
+// -----------------------------------------------------------------------------------------------
+
+// ****************************************************************************
+// Clase 'Adosadas'
+
+Adosadas::Adosadas(int n, float h1, float h2, float w, float l)
+:  MallaInd( "Casa" )
+{
+   altura1=h1;
+   altura2=h2;
+   ancho=w;
+   largo=l;
+
+
+   for(int i=0; i<n+1; i++){
+      vertices.push_back({-w/2.0,0,i*l});
+      vertices.push_back({w/2.0,0,i*l});
+
+      vertices.push_back({-w/2.0,h1,i*l});
+      vertices.push_back({w/2.0,h1,i*l});
+
+      vertices.push_back({0,h2,i*l});
+   }
+
+   // Triángulos
+   for(int i=0; i<n; i++){
+      triangulos.push_back({5*i,5*i+5,5*i+2});
+      triangulos.push_back({5*i+5,5*i+2,5*i+7});
+
+      triangulos.push_back({5*i+1,5*i+6,5*i+8});
+      triangulos.push_back({5*i+8,5*i+1,5*i+3});
+
+      triangulos.push_back({5*i+2,5*i+7,5*i+4});
+      triangulos.push_back({5*i+7,5*i+9,5*i+4});
+      
+      triangulos.push_back({5*i+3,5*i+8,5*i+9});
+      triangulos.push_back({5*i+9,5*i+3,5*i+4});
+   }
+   
+}
+
+
+
+// -----------------------------------------------------------------------------------------------
+

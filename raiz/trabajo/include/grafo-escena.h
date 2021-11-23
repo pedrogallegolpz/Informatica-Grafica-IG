@@ -31,6 +31,7 @@
 #include "objeto3d.h"
 #include "materiales-luces.h"
 
+
 // *********************************************************************
 // declaración adelantada de estructura para un nodo del grafo de escena
 
@@ -104,3 +105,39 @@ class NodoGrafoEscena : public Objeto3D
 #endif // GRAFO_ESCENA_HPP
 
 // *********************************************************************
+
+
+// EXAMEN
+
+class CuboAux : public NodoGrafoEscena
+{
+    private:
+        Matriz4f * rotacion;
+
+    public:
+
+        CuboAux(float tmin, float tmax, float T);
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+class VariosCubos : public NodoGrafoEscena
+{
+    private:
+        std::vector<Matriz4f *> rotacion;
+        float t_min, t_max, periodo;
+
+    public:
+
+        VariosCubos(int n, float tmin, float tmax, float T);
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
