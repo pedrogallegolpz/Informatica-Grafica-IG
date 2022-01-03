@@ -24,6 +24,7 @@
 
 #include "matrices-tr.h"
 #include "materiales-luces.h"
+#include <cstring>
 
 using namespace std ;
 
@@ -33,10 +34,10 @@ const bool trazam = false ;
 
 Textura::Textura( const std::string & nombreArchivoJPG )
 {
-   // COMPLETAR: práctica 4: cargar imagen de textura
+   // COMPLETADO: práctica 4: cargar imagen de textura
    // (las variables de instancia están inicializadas en la decl. de la clase)
    // .....
-
+   imagen = LeerArchivoJPEG(nombreArchivoJPG.c_str(), ancho, alto);
 }
 
 // ---------------------------------------------------------------------
@@ -45,10 +46,16 @@ Textura::Textura( const std::string & nombreArchivoJPG )
 
 void Textura::enviar()
 {
-   // COMPLETAR: práctica 4: enviar la imagen de textura a la GPU
+   // COMPLETADO: práctica 4: enviar la imagen de textura a la GPU
    // y configurar parámetros de la textura (glTexParameter)
    // .......
+   glGenTextures(1, &ident_textura);                    // genera identificador
+   glBindTexture( GL_TEXTURE_2D, ident_textura );       // activa textura con identificador ’idTex’ :
+   
+   // Envía a la GPU
+   gluBuild2DMipmaps(GL_TEXTURE_2D, GL_RGB, ancho, alto, GL_RGB, GL_UNSIGNED_BYTE, imagen);
 
+   enviada = true;
 }
 
 //----------------------------------------------------------------------
@@ -69,10 +76,26 @@ Textura::~Textura( )
 
 void Textura::activar( Cauce & cauce  )
 {
-   // COMPLETAR: práctica 4: enviar la textura a la GPU (solo la primera vez) y activarla
+   // COMPLETADO: práctica 4: enviar la textura a la GPU (solo la primera vez) y activarla
    // .......
-
+   if(!enviada){
+      enviar();
+   }
+   cauce.fijarEvalText(true, ident_textura);
+   cauce.fijarTipoGCT(modo_gen_ct, coefs_s, coefs_t);
 }
+// *********************************************************************
+
+TexturaXY::TexturaXY( const std::string & nom ):Textura(nom){
+   //Práctica 4: implementar constructor de Textura XY
+   modo_gen_ct = mgct_coords_objeto;
+}// *********************************************************************
+
+TexturaXZ::TexturaXZ( const std::string & nom ):Textura(nom){
+   //Práctica 4: implementar constructor de Textura XY
+   modo_gen_ct = mgct_coords_ojo;
+}
+
 // *********************************************************************
 // crea un material usando un color plano y los coeficientes de las componentes
 
@@ -123,9 +146,18 @@ std::string Material::nombre() const
 
 void Material::activar( ContextoVis & cv )
 {
-   // COMPLETAR: práctica 4: activar un material
+   // COMPLETADO: práctica 4: activar un material
    // .....
-
+   if(textura!= nullptr){
+      textura->activar(*cv.cauce_act);
+   }else{
+      cv.cauce_act->fijarEvalText(false);    // Necesario para desactivar texturas previas en objetos actuales sin textura
+   }
+   Tupla3f mil_ka =Tupla3f(k_amb,k_amb,k_amb);
+   Tupla3f mil_kd = Tupla3f(k_amb,k_amb,k_amb);
+   Tupla3f mil_ks =Tupla3f(k_dif,k_dif,k_dif);
+   cv.cauce_act->fijarParamsMIL(mil_ka, mil_kd, mil_ks, exp_pse);
+   //cv.cauce_act->fijarEvalMIL(true); // Esto no se si hay que ponerlo
 
    // registrar el material actual en el cauce
    cv.material_act = this ; 
@@ -192,11 +224,26 @@ void ColFuentesLuz::insertar( FuenteLuz * pf )  // inserta una nueva
 
 void ColFuentesLuz::activar( Cauce & cauce )
 {
-   // COMPLETAR: práctica 4: activar una colección de fuentes de luz
+   // COMPLETADO: práctica 4: activar una colección de fuentes de luz
    //   (crear un array con los colores y otro con las posiciones/direcciones,
    //    usar el cauce para activarlas)
    // .....
+   vector<Tupla3f> color;
+   vector<Tupla4f> pos_dir;
+   Tupla4f pdir;
 
+   for(unsigned i=0; i<vpf.size(); i++){
+      color.push_back(vpf[i]->color);
+      
+      float coord1 = cos(vpf[i]->longi*M_PI/180.0)*cos(vpf[i]->lati*M_PI/180);
+      float coord2 = sin(vpf[i]->lati*M_PI/180.0);
+      float coord3 = sin(vpf[i]->longi*M_PI/180.0)*cos(vpf[i]->lati*M_PI/180);
+      float coord4 = 0.0;
+
+      pdir={coord1, coord2, coord3, coord4};
+      pos_dir.push_back(pdir.normalized());
+   }
+   cauce.fijarFuentesLuz(color, pos_dir);
 }
 
 // ---------------------------------------------------------------------

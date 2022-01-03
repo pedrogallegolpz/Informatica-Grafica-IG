@@ -16,21 +16,29 @@ CompuertaEngranada::CompuertaEngranada(unsigned compuerta){
     switch(compuerta){
         case 0:
             agregar(EntradaNGE(MAT_Traslacion(0.4,0,0.15)));
+            ponerNombre("Compuerta Engranada 0");
+            ponerIdentificador(13);
             frontal = false;
             break;
         case 1:
             agregar(EntradaNGE(MAT_Traslacion(0.2+0.4,0,0.35)));
             agregar(EntradaNGE(MAT_Rotacion(180,0,1,0)));
+            ponerNombre("Compuerta Engranada 1");
+            ponerIdentificador(23);
             frontal = false;
             break;
         case 2:
             agregar(EntradaNGE(MAT_Traslacion(0.4,0,0.2+0.15)));
             agregar(EntradaNGE(MAT_Rotacion(90,0,1,0)));
+            ponerNombre("Compuerta Engranada 2");
+            ponerIdentificador(33);
             frontal = true;
             break;
         case 3:
             agregar(EntradaNGE(MAT_Traslacion(0.6,0,0.15)));
             agregar(EntradaNGE(MAT_Rotacion(270,0,1,0)));
+            ponerNombre("Compuerta Engranada 3");
+            ponerIdentificador(43);
             frontal = true;
             break;
     }
@@ -83,15 +91,23 @@ BrazoDron::BrazoDron(int angulo){
     switch(angulo){
         case 135:
             agregar(EntradaNGE(MAT_Traslacion(0.1,0.2,0.1)));
+            ponerNombre("Brazo Dron 0");
+            ponerIdentificador(53);
             break;
         case 225:
             agregar(EntradaNGE(MAT_Traslacion(0.1,0.2,0.4)));
+            ponerNombre("Brazo Dron 1");
+            ponerIdentificador(63);
             break;
         case 315:
             agregar(EntradaNGE(MAT_Traslacion(0.9,0.2,0.4)));
+            ponerNombre("Brazo Dron 2");
+            ponerIdentificador(73);
             break;
         case 45:
             agregar(EntradaNGE(MAT_Traslacion(0.9,0.2,0.1)));
+            ponerNombre("Brazo Dron 3");
+            ponerIdentificador(83);
             break;
     }
     agregar(EntradaNGE(MAT_Rotacion(angulo,0,1,0)));            
@@ -159,6 +175,8 @@ Dron::Dron(){
     // Creamos el cuerpo del Dron
     CuerpoDron *d = new CuerpoDron();
     d->ponerColor({0.7,0.7,0.7});
+    d->ponerNombre("Cuerpo Dron");
+    d->ponerIdentificador(93);
     agregar(EntradaNGE(d));
 
 }
@@ -209,6 +227,8 @@ Carga::Carga(){
     // Creamos la cuerda
     TuboPrisma *p = new TuboPrisma(5);
     p->ponerColor({0.6,0.3,0});
+    p->ponerNombre("Cuerda");
+    p->ponerIdentificador(103);
     agregar(EntradaNGE(p));
 
 }
@@ -248,12 +268,16 @@ DronCarga::DronCarga(){
 
     // Creamos la carga
     carga = new Carga();
+    carga->ponerNombre("Carga");
+    carga->ponerIdentificador(123);
     agregar(EntradaNGE(carga));
 
     agregar(EntradaNGE(MAT_Traslacion(0,1.95,0)));
 
     // Creamos el Dron
     dron = new Dron();
+    dron->ponerNombre("Dron");
+    dron->ponerIdentificador(113);
     agregar(EntradaNGE(dron));
 }
 
@@ -282,8 +306,6 @@ void DronCarga::actualizarEstadoParametro( const unsigned iParam, const float t_
     
     
 }
-
-
 
 ////////////////////////////////////////////
 //
@@ -448,3 +470,6 @@ void GrafoCubos::actualizarEstadoParametro( const unsigned iParam, const float t
     
     
 }
+
+
+

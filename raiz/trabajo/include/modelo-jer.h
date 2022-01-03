@@ -94,6 +94,9 @@ class DronCarga : public NodoGrafoEscena
 
 };
 
+
+
+
 ////////////////////////////////////////////
 //
 //  EJER 1 EXTRAS

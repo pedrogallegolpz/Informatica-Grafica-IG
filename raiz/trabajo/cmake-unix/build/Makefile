@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix
+CMAKE_SOURCE_DIR = /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/build
+CMAKE_BINARY_DIR = /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/build/CMakeFiles /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/build/CMakeFiles /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,464 +123,518 @@ pracs_ig_exe/fast:
 	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/build
 .PHONY : pracs_ig_exe/fast
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.o
-
-# target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.o
-
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.i
-
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.i
-
-# target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.i
-
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.s
-
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.s
-
-# target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.cpp.s
-
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.o
-
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.cpp.s
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.o
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.o
 
 # target to build an object file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.o:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.o
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.o
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.o
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.i
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.i
 
 # target to preprocess a source file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.i:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.i
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.i
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.i
 
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.s
 
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.s
 
 # target to generate assembly for a file
-home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.s:
-	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.s
-.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.cpp.s
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.cpp.s
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.o
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.o
+
+# target to build an object file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.o
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.i
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.i
+
+# target to preprocess a source file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.i
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.s
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.s
+
+# target to generate assembly for a file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.cpp.s
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.o
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.o
+
+# target to build an object file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.o
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.i
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.i
+
+# target to preprocess a source file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.i
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.s
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.s
+
+# target to generate assembly for a file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.cpp.s
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.o: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.o
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.o
+
+# target to build an object file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.o:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.o
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.o
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.i: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.i
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.i
+
+# target to preprocess a source file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.i:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.i
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.i
+
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.s: home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.s
+
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.s
+
+# target to generate assembly for a file
+home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.s:
+	$(MAKE) -f CMakeFiles/pracs_ig_exe.dir/build.make CMakeFiles/pracs_ig_exe.dir/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.s
+.PHONY : home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.cpp.s
 
 # Help Target
 help:
@@ -591,57 +645,63 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pracs_ig_exe"
 	@echo "... edit_cache"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/cauce.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/fbo.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/ig-aux.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-jpg.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/lector-ply.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/recursos/src/matrices-tr.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/animacion.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/array-verts.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/camara.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/escena.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/grafo-escena.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/main.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-ind.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/malla-revol.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/materiales-luces.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/objeto3d.s"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.o"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.i"
-	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/src/seleccion.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/cauce.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/fbo.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/ig-aux.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-jpg.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/lector-ply.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/recursos/src/matrices-tr.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/animacion.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/array-verts.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/camara.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/escena.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/grafo-escena.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/latapeones.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/main.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-ind.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/malla-revol.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/materiales-luces.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/modelo-jer.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/objeto3d.s"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.o"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.i"
+	@echo "... home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/src/seleccion.s"
 .PHONY : help
 
 

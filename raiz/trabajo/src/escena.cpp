@@ -14,6 +14,7 @@
 #include "seleccion.h"
 
 #include "modelo-jer.h"
+#include "latapeones.h"
 
 
 
@@ -24,12 +25,17 @@ Escena::Escena()
 {
    // COMPLETAR: Práctica 4: inicializar 'col_fuentes' y 'material_ini'
    // ...
-
+   col_fuentes = new Col2Fuentes();
+   material_ini = new Material();
 
    // COMPLETAR: Práctica 5: hacer 'push_back' de varias camaras perspectiva u ortogonales,
    // (sustituir la cámara orbital simple ('CamaraOrbitalSimple') por varias cámaras de 3 modos ('Camara3Modos')
-   camaras.push_back( new CamaraOrbitalSimple() );
-
+   //camaras.push_back( new CamaraOrbitalSimple() );
+   camaras.push_back( new Camara3Modos(true,{0.0,0.0,5.0},16.0/9.0, Tupla3f(0,0,0), 70.0) );
+   camaras.push_back( new Camara3Modos(false,{5.0,5.0,5.0},16.0/9.0, Tupla3f(0,0,0), 70.0) );
+   camaras.push_back( new Camara3Modos(true,{5.0,0.0,0.0},16.0/9.0, Tupla3f(0,0,0), 70.0) );
+ 
+   // Por alguna razón no se puede poner de segundo parámetro {0.0,5.0,0.0}
 }
 // -----------------------------------------------------------------------------------------------
 // visualiza la escena en la ventana actual, usando la configuración especificada en 'cv'
@@ -87,6 +93,15 @@ void Escena::visualizarGL( ContextoVis & cv )
       // * activar la colección de fuentes de la escena
       // * activar el material inicial
       // ....
+      cauce->fijarEvalMIL(true);
+      cauce->fijarEvalText(false);
+
+      if(col_fuentes != nullptr){
+         col_fuentes->activar(*cauce);
+      }      
+      if(material_ini != nullptr){
+         material_ini->activar(cv);
+      }
 
    }
    else // si la iluminación no está activada, deshabilitar MIL y texturas
@@ -169,7 +184,7 @@ Escena1::Escena1()
 
    // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
    objetos.push_back( new Cubo() );
-
+   
    // COMPLETADO: Práctica 1: creación del resto objetos de la práctica 1
    // Añadir objetos al vector 'objetos', con:
    //     objetos.push_back( new .... )
@@ -183,7 +198,7 @@ Escena1::Escena1()
    objetos.push_back( new MallaTriangulo() );
    objetos.push_back( new MallaCuadrado() );
    objetos.push_back( new MallaPiramideL() );
-
+   
    cout << "hecho." << endl << flush ;
 }
 
@@ -240,7 +255,7 @@ Escena2::Escena2()
 Escena3::Escena3()
 {
    using namespace std ;
-   cout << "Creando objetos de escena 2 .... " << flush ;
+   cout << "Creando objetos de escena 3 .... " << flush ;
 
    // Examen ejer3
    objetos.push_back( new VariosCubos(8,25.0,75.0,2.0) );    
@@ -266,6 +281,19 @@ Escena3::Escena3()
 // los objetos que se indican en los guiones de las práctica 4
 // .......
 
+Escena4::Escena4()
+{
+   using namespace std ;
+   cout << "Creando objetos de escena 4 .... " << flush ;
+  
+   // añadir el objeto LataPeones a la lista de objetos de esta escena:
+   objetos.push_back( new LataPeones() );    
+
+   // añadir el objeto NodoCubo a la lista de objetos de esta escena:
+   objetos.push_back( new NodoCubo() );    
+ 
+   cout << "hecho." << endl << flush ;
+}
 
 
 // ----------------------------------------------------------------------
@@ -273,6 +301,17 @@ Escena3::Escena3()
 // Añadir la implementación del constructor de la clase Escena5 para construir
 // los objetos que se indican en los guiones de las práctica 5
 // .......
+
+Escena5::Escena5()
+{
+   using namespace std ;
+   cout << "Creando objetos de escena 5 .... " << flush ;
+  
+   // añadir el objeto LataPeones a la lista de objetos de esta escena:
+   objetos.push_back( new VariasLatasPeones() );    
+ 
+   cout << "hecho." << endl << flush ;
+}
 
 
 

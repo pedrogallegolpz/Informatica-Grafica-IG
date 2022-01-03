@@ -1,4 +1,4 @@
-# Install script for directory: /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix
+# Install script for directory: /home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

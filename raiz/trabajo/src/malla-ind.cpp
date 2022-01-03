@@ -49,9 +49,24 @@ void MallaInd::calcularNormalesTriangulos()
       return ;
    }
 
-   // COMPLETAR: Práctica 4: creación de la tabla de normales de triángulos
+   // COMPLETADO: Práctica 4: creación de la tabla de normales de triángulos
    // ....
+   for(unsigned i=0; i<triangulos.size(); i++){
+      Tupla3f q = vertices[triangulos[i](0)];
+      Tupla3f p = vertices[triangulos[i](1)];
+      Tupla3f r = vertices[triangulos[i](2)];
 
+      Tupla3f a = q-p;
+      Tupla3f b = r-p;
+
+      Tupla3f m = a.cross(b);
+
+      if(m(0)!=0 or m(0)!=0 or m(0)!=0){
+         m.normalized();
+      }
+
+      nor_tri.push_back(m);
+   }
 }
 
 
@@ -60,10 +75,24 @@ void MallaInd::calcularNormalesTriangulos()
 
 void MallaInd::calcularNormales()
 {
-   // COMPLETAR: en la práctica 4: calculo de las normales de la malla
+   // COMPLETADO: en la práctica 4: calculo de las normales de la malla
    // se debe invocar en primer lugar 'calcularNormalesTriangulos'
    // .......
+   calcularNormalesTriangulos();
 
+   nor_ver.resize(vertices.size(),Tupla3f(0,0,0));
+
+   for(unsigned i=0; i<triangulos.size(); i++){
+      nor_ver[triangulos[i](0)] = nor_ver[triangulos[i](0)]+nor_tri[i];
+      nor_ver[triangulos[i](1)] = nor_ver[triangulos[i](1)]+nor_tri[i];
+      nor_ver[triangulos[i](2)] = nor_ver[triangulos[i](2)]+nor_tri[i];
+   }
+
+   for(unsigned i=0; i<nor_ver.size(); i++){
+      if(nor_ver[i](0)!=0 or nor_ver[i](0)!=0 or nor_ver[i](0)!=0){
+         nor_ver[i].normalized();
+      }
+   }
 
 }
 
@@ -104,14 +133,14 @@ void MallaInd::visualizarGL( ContextoVis & cv )
       array_verts->fijarColores(GL_FLOAT, 3, col_ver.data());
 
    if(!cc_tt_ver.empty())
-      array_verts->fijarCoordText(GL_FLOAT, 3, cc_tt_ver.data());
-
+      array_verts->fijarCoordText(GL_FLOAT, 2, cc_tt_ver.data());
+   
    if(!nor_ver.empty())
       array_verts->fijarNormales(GL_FLOAT, nor_ver.data());
 
 
    // COMPLETAR: práctica 1: visualizar según el modo (en 'cv.modo_envio')
-   //   ** inmediato begin/end       : usar método 'visualizarGL_MI_BVE' de 'ArrayVerts'
+   //   ** inmediato begin/end       : usar método 'visualizarGL_MI_BVE' de 'ArrayVerts'visualizarGL
    //   ** inmediato con una llamada : usar método 'visualizarGL_MI_DAE' de 'ArrayVerts'
    //   ** diferido (con un VAO)     : usar método 'visualizarGL_MD_VAO' de 'ArrayVerts'
    // (en cualquier caso hay que pasar como parámetro el tipo de primitiva adecuada a una malla de triángulos).
@@ -159,7 +188,7 @@ MallaPLY::MallaPLY( const std::string & nombre_arch )
 
    // COMPLETAR: práctica 4: invocar  a 'calcularNormales' para el cálculo de normales
    // .................
-
+   calcularNormales();
 
 
 }
@@ -195,6 +224,85 @@ Cubo::Cubo()
          {1,5,7}, {1,7,3}  // Z+ (+1)
       } ;
 
+   calcularNormales();
+}
+
+// Clase 'Cubo24
+
+Cubo24::Cubo24()
+:  MallaInd( "cubo 24 vértices" )
+{
+
+   vertices =
+      {  { -1.0, -1.0, -1.0 }, // 0
+         { -1.0, -1.0, +1.0 }, // 1
+         { -1.0, +1.0, -1.0 }, // 2
+         { -1.0, +1.0, +1.0 }, // 3
+         { +1.0, -1.0, -1.0 }, // 4
+         { +1.0, -1.0, +1.0 }, // 5
+         { +1.0, +1.0, -1.0 }, // 6
+         { +1.0, +1.0, +1.0 }, // 7
+
+	 { -1.0, -1.0, -1.0 }, // 0 +8
+         { -1.0, -1.0, +1.0 }, // 1 +8
+         { -1.0, +1.0, -1.0 }, // 2 +8
+         { -1.0, +1.0, +1.0 }, // 3 +8
+         { +1.0, -1.0, -1.0 }, // 4 +8
+         { +1.0, -1.0, +1.0 }, // 5 +8
+         { +1.0, +1.0, -1.0 }, // 6 +8
+         { +1.0, +1.0, +1.0 }, // 7 +8
+
+	 { -1.0, -1.0, -1.0 }, // 0 +16
+         { -1.0, -1.0, +1.0 }, // 1 +16
+         { -1.0, +1.0, -1.0 }, // 2 +16 
+         { -1.0, +1.0, +1.0 }, // 3 +16
+         { +1.0, -1.0, -1.0 }, // 4 +16
+         { +1.0, -1.0, +1.0 }, // 5 +16
+         { +1.0, +1.0, -1.0 }, // 6 +16
+         { +1.0, +1.0, +1.0 } // 7 +16
+      } ;
+
+
+   triangulos =
+      {  {0,1,3}, {0,3,2}, // X-
+         {4,7,5}, {4,6,7}, // X+ (+4)
+         {8,13,9}, {8,12,13}, // Y-
+         {10,11,15}, {10,15,14}, // Y+ (+2)
+         {16,22,20}, {16,18,22}, // Z-
+         {17,21,23}, {17,23,19}  // Z+ (+1)
+      } ;
+
+   cc_tt_ver=
+     {{0,1}, // 0
+      {1,1}, // 1
+      {0,0}, // 2
+      {1,0}, // 3
+      {1,1}, // 4
+      {0,1}, // 5
+      {1,0}, // 6
+      {0,0}, // 7
+
+      {0,0}, // 0 +8
+      {1,0}, // 1 +8
+      {1,0}, // 2 +8
+      {0,0}, // 3 +8
+      {0,1}, // 4 +8
+      {1,1}, // 5 +8
+      {1,1}, // 6 +8
+      {0,1}, // 7 +8
+
+      {1,1}, // 0 +16
+      {0,1}, // 1 +16
+      {1,0}, // 2 +16 
+      {0,0}, // 3 +16
+      {0,1}, // 4 +16
+      {1,1}, // 5 +16
+      {0,0}, // 6 +16
+      {1,0} // 7 +16
+     };
+
+
+   calcularNormales();
 }
 
 // ****************************************************************************
@@ -256,6 +364,8 @@ Tetraedro::Tetraedro()
          {1,2,3},          // Segunda cara (según sentido antihorario)
          {2,0,3},          // Tercera cara (según sentido antihorario)
       } ;
+
+   calcularNormales();
 
 }
 // ****************************************************************************

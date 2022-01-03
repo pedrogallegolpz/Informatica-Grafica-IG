@@ -33,23 +33,73 @@ void MallaRevol::inicializar
    const unsigned               num_copias  // número de copias del perfil
 )
 {
+   unsigned m = perfil.size();
+
+   //Práctica 4
+   vector<Tupla3f> nor_aristas;
+   vector<float> dist;
+   float suma_dist=0;
+   
+   for(unsigned i=0; i<m-1; i++){
+      // Normales
+      Tupla3f v_aux = perfil[i+1]-perfil[i];
+      Tupla3f v(-v_aux(1),v_aux(0),0);    // Rotamos 90º
+      nor_aristas.push_back(v);
+
+      // Textura
+      dist.push_back(sqrt((perfil[i+1]-perfil[i]).lengthSq()));
+      suma_dist+=dist[i];
+   }
+
+   // Normales
+   vector<Tupla3f> perf_norver;
+   perf_norver.push_back(nor_aristas[0]);
+   for(unsigned i=1; i<nor_aristas.size(); i++){
+      Tupla3f n = nor_aristas[i-1]+nor_aristas[i];
+      n.normalized();
+      perf_norver.push_back(n);
+   }
+   perf_norver.push_back(nor_aristas[nor_aristas.size()-1]);
+
+   // Texturas
+   vector<float> t;
+   float suma_parcial=0;
+   for(unsigned i=0; i<m; i++){
+      t.push_back(suma_parcial/suma_dist);
+      if(i<m-1)
+         suma_parcial+=dist[i];
+   }
+
+
+
    // COMPLETAR: Práctica 2: completar: creación de la malla....
    // Vértices
-   int m = perfil.size();
-   for(int i=0; i<num_copias; i++){
+   for(unsigned i=0; i<num_copias; i++){
       for(int j=0; j<m; j++){
-         float x=perfil[j](0)*cos((2*PI*i)/(num_copias-1)),
-               y=perfil[j](1),
-               z=perfil[j](0)*sin((2*PI*i)/(num_copias-1));   // Usamos la componente X de perfil porque nos da "el radio"
+         // P4 Normales
+         float x=perf_norver[j](0)*cos((2*PI*i)/(num_copias-1)),
+               y=perf_norver[j](1),
+               z=perf_norver[j](0)*sin((2*PI*i)/(num_copias-1));   
          
          Tupla3f q(x,y,z);
-         vertices.push_back(q);
+         nor_ver.push_back(q);
+      
+         // P4 Texturas
+         cc_tt_ver.push_back({1.0- ((float)i)/((float) num_copias-1), 1-t[j]});         
+         
+         // P2 Vértices
+         x=perfil[j](0)*cos((2*PI*i)/(num_copias-1));
+         y=perfil[j](1);
+         z=perfil[j](0)*sin((2*PI*i)/(num_copias-1));   // Usamos la componente X de perfil porque nos da "el radio"
+         
+         Tupla3f p(x,y,z);
+         vertices.push_back(p);
       }
    }
 
    // Triángulos
-   for(int i=0; i<num_copias-1; i++){
-      for(int j=0; j<m-1; j++){
+   for(unsigned i=0; i<num_copias-1; i++){
+      for(unsigned j=0; j<m-1; j++){
          int k = i*m+j;
 
          Tupla3i triangulo1(k, k+m, k+m+1);

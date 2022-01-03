@@ -69,7 +69,9 @@ class NodoGrafoEscena : public Objeto3D
    // COMPLETADO: práctica 3: definir variables y métodos privados del nodo
    // .......
       std::vector<EntradaNGE> entradas;
-   
+
+    // P5
+        bool centro_calculado = false;
    public:
 
    NodoGrafoEscena() ;
@@ -102,10 +104,19 @@ class NodoGrafoEscena : public Objeto3D
 
 } ;
 
-#endif // GRAFO_ESCENA_HPP
-
 // *********************************************************************
 
+// Práctica 4
+class NodoCubo: public NodoGrafoEscena
+{
+    private:
+    public:
+        NodoCubo();
+
+        unsigned leerNumParametros() const;
+
+        void actualizarEstadoParametro(const unsigned iParam, const float t_sec);
+};
 
 // EXAMEN
 
@@ -141,3 +152,7 @@ class VariosCubos : public NodoGrafoEscena
 
 
 };
+
+
+
+#endif // GRAFO_ESCENA_HPP

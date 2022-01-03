@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11  -Wall -Wextra -Wno-unused-parameter -Wno-unused-private
 
 CXX_DEFINES = -DLINUX
 
-CXX_INCLUDES = -I/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/../../trabajo/include -I/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P1/raiz/trabajo/cmake-unix/../../recursos/include 
+CXX_INCLUDES = -I/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/../../trabajo/include -I/home/pcgl/Documentos/Estudios/Universidad/Cuarto/Cuatrimestre1/IG/Practicas/P45/raiz/trabajo/cmake-unix/../../recursos/include 
 

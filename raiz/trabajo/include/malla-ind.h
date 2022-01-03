@@ -88,6 +88,14 @@ class Cubo : public MallaInd
 
 // ---------------------------------------------------------------------
 
+class Cubo24 : public MallaInd
+{
+   public:
+      Cubo24();
+};
+
+// ---------------------------------------------------------------------
+
 class CuboTejado : public MallaInd
 {
    public:
@@ -109,14 +117,6 @@ class CuboColores : public MallaInd
    public:
       CuboColores();
 };
- 
-// --------------------------------------------------------------------
-
-class Cubo24 : public MallaInd
-{
-  public:
-      Cubo24();
-} ;
  
 // --------------------------------------------------------------------
 

@@ -16,6 +16,8 @@
 #include <algorithm> // std::min, std::max
 #include "ig-aux.h"
 #include "camara.h"
+#include <cassert>
+
 
 
 // *********************************************************************
@@ -306,6 +308,18 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // actualizar las dos primeras componentes (ángulos) de las coordenadas polares
          // actualizar las coordenadas cartesianas a partir de las polares
          // .....
+         org_polares(0) = org_polares(0)+da*0.02;
+         org_polares(1) = org_polares(1)+db*0.02;
+	
+         
+         if(org_polares[1]<-(M_PI*0.5-0.01)) 
+            org_polares[1]=-(M_PI*0.5-0.01);
+	      else if(org_polares[1]>(M_PI*0.5-0.01)) 
+            org_polares[1]=(M_PI*0.5-0.01);
+         
+         org_cartesianas = Cartesianas(org_polares);
+
+
 
          actualizarEjesMCV();
          break ;
@@ -321,8 +335,21 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 4. actualizar las coordenadas cartesianas
          // 5. actualizar los ejes del MCV (actualizarEjesMCV)
          // .....
+         org_polares(0) = org_polares(0)+da*0.02;
+         org_polares(1) = org_polares(1)-db*0.02;
 
 
+         if(org_polares[1]<-(M_PI*0.5-0.01)) 
+            org_polares[1]=-(M_PI*0.5-0.01);
+	      else if(org_polares[1]>(M_PI*0.5-0.01)) 
+            org_polares[1]=(M_PI*0.5-0.01);
+            
+         Tupla3f org_cartesianas_old = org_cartesianas;
+         org_cartesianas = Cartesianas(org_polares);
+
+         punto_atencion = punto_atencion - (org_cartesianas-org_cartesianas_old);
+
+         actualizarEjesMCV();
          break ;
       }
       case ModoCam::prim_pers_despl :
@@ -332,6 +359,7 @@ void Camara3Modos::desplRotarXY( const float da, const float db )
          // 'db' unidades en el eje Y de la cámara.
          // .....
          // (nota: los ejes no cambian)
+         punto_atencion = punto_atencion - da*eje[0]*0.2 + db*eje[1]*0.2;
 
          break ;
       }
@@ -354,6 +382,17 @@ void Camara3Modos::moverZ( const float dz )
          // actualizar las coordenadas cartesianas a partir de las polares
          // nota: los ejes no cambian, ni el punto de atención
          // .....
+         float r_min = 0.5;
+         float eps = 0.1;
+
+         if(!(dz<=-1 or dz>=1)){
+            std::cout << "\nFALLO: dz toma valores en el intervalo (-1,1).\n";
+         }
+         assert(dz<=-1 or dz>=1);
+
+         org_polares(2) = r_min + (org_polares(2)-r_min)*pow(1+eps,dz);
+
+         org_cartesianas = Cartesianas(org_polares);
 
          break ;
       }
@@ -364,6 +403,7 @@ void Camara3Modos::moverZ( const float dz )
          // desplazar el punto de atención 'dz' unidades en el eje Z
          // nota: los ejes no cambian
          // .....
+         punto_atencion = punto_atencion + dz*eje[Z];
 
          break ;
       }
@@ -380,7 +420,11 @@ void Camara3Modos::mirarHacia( const Tupla3f & nuevo_punto_aten )
    // Actualizar las coordenadas cartesianas (desplazarlas)
    // Actualizar las coordenadas polares a partir de las cartesianas
    // Poner el modo actual en modo examinar
+   org_cartesianas = org_cartesianas + (nuevo_punto_aten - punto_atencion);
+   org_polares = Esfericas(org_cartesianas);
+   punto_atencion = nuevo_punto_aten;
 
+   modo_actual = ModoCam::examinar;
 
    // actualizar los ejes del marco de coordenadas del mundo
    actualizarEjesMCV();

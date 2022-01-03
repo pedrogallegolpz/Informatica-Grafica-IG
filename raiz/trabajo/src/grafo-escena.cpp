@@ -87,18 +87,6 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
    // COMPLETADO: práctica 3: recorrer las entradas y visualizar cada nodo.
    // ........
    // Guardamos el antiguo color del cauce y fijamos el color del objeto actual en el cauce
-   const Tupla4f color_previo = leerFijarColVertsCauce(cv);
-   cv.cauce_act->pushMM();
-
-   for(unsigned i=0; i<entradas.size(); i++){
-      switch(entradas[i].tipo){
-         case TipoEntNGE::objeto:
-            entradas[i].objeto->visualizarGL(cv);
-            break;
-         case TipoEntNGE::transformacion:
-            cv.cauce_act->compMM( *entradas[i].matriz);
-            break;
-   
 
    // COMPLETAR: práctica 4: en la práctica 4, si 'cv.iluminacion' es 'true',
    // se deben de gestionar los materiales:
@@ -106,8 +94,26 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
    //   2. si una entrada des de tipo material, activarlo y actualizar 'cv.material_act'
    //   3. al finalizar, restaurar el material activo al inicio (si es distinto del actual)
 
+   const Tupla4f color_previo = leerFijarColVertsCauce(cv);
+   cv.cauce_act->pushMM();
+   
+   Material * material_previo = cv.iluminacion ? cv.material_act : nullptr;
+
+   for(unsigned i=0; i<entradas.size(); i++){
+      switch(entradas[i].tipo){
+         case TipoEntNGE::objeto:
+            entradas[i].objeto->visualizarGL(cv);
+            break;
+
+         case TipoEntNGE::transformacion:
+            cv.cauce_act->compMM( *entradas[i].matriz);
+            break;
 
          case TipoEntNGE::material:
+            if(cv.iluminacion){
+               cv.material_act=entradas[i].material;
+               cv.material_act->activar(cv);
+            }            
             break;
          case TipoEntNGE::noInicializado:
             break;
@@ -116,7 +122,10 @@ void NodoGrafoEscena::visualizarGL( ContextoVis & cv )
    }
    cv.cauce_act->popMM();
 
-
+   if(material_previo != nullptr){
+      cv.material_act = material_previo;
+      cv.material_act->activar(cv);
+   }
    // restaurar el color previamente fijado
    glColor4fv( color_previo );
 }
@@ -200,7 +209,36 @@ void NodoGrafoEscena::calcularCentroOC()
    //    en coordenadas de objeto (hay que hacerlo recursivamente)
    //   (si el centro ya ha sido calculado, no volver a hacerlo)
    // ........
+   if(!centro_calculado){
+      Tupla3f centro(0,0,0);
+      unsigned num_objetos = 0;
 
+      Matriz4f modelado = MAT_Ident();
+
+      for(unsigned i=0; i<entradas.size(); i++){
+         // Para cada entrada
+      
+         switch(entradas[i].tipo){
+            case TipoEntNGE::objeto:
+               // Si es un objeto
+               entradas[i].objeto->calcularCentroOC();
+               centro = centro + modelado*entradas[i].objeto->leerCentroOC();  // Sumamos su centro
+               num_objetos++;
+               break;
+
+            case TipoEntNGE::transformacion:
+               // Si es una transformación
+               modelado = modelado*(*entradas[i].matriz);
+               break;
+         }
+      }
+
+      centro = centro / ((float)num_objetos);    // Calculamos el punto medio
+
+      ponerCentroOC(centro);
+
+      centro_calculado = true;
+   }
 }
 // -----------------------------------------------------------------------------
 // método para buscar un objeto con un identificador y devolver un puntero al mismo
@@ -220,20 +258,60 @@ bool NodoGrafoEscena::buscarObjeto
 
    // 1. calcula el centro del objeto, (solo la primera vez)
    // ........
-
+   calcularCentroOC();
 
    // 2. si el identificador del nodo es el que se busca, ya está (terminar)
    // ........
+   if(ident_busc == leerIdentificador()){
+      (*objeto) = this;
+      centro_wc = mmodelado*leerCentroOC();
 
+      return true;
+   }
 
    // 3. El nodo no es el buscado: buscar recursivamente en los hijos
    //    (si alguna llamada para un sub-árbol lo encuentra, terminar y devolver 'true')
    // ........
+   Matriz4f modelado=mmodelado;
+   for(unsigned i=0; i<entradas.size(); i++){
+      // Para cada entrada
+   
+      switch(entradas[i].tipo){
+         case TipoEntNGE::objeto:
+            // Si es un objeto
+            if(entradas[i].objeto->buscarObjeto(ident_busc, modelado, objeto, centro_wc))
+               return true;
+            break;
 
+         case TipoEntNGE::transformacion:
+            // Si es una transformación
+            modelado = modelado*(*entradas[i].matriz);
+            break;
+      }
+   }
 
    // ni este nodo ni ningún hijo es el buscado: terminar
    return false ;
 }
+
+
+
+
+// Práctica 4
+
+NodoCubo::NodoCubo(){
+   agregar(EntradaNGE(new Material(new Textura("../recursos/imgs/window-icon.jpg"),0.5,1,1,0.5)));
+   agregar(EntradaNGE(new Cubo24()));
+}
+
+unsigned NodoCubo::leerNumParametros() const{
+    return 0;
+}
+
+void NodoCubo::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+    assert(iParam<leerNumParametros());   
+}
+
 
 
 ///////////////////////////////////
@@ -241,18 +319,9 @@ bool NodoGrafoEscena::buscarObjeto
 
 
 CuboAux::CuboAux(float tmin, float tmax, float T){
-   
-
-
     Cubo * cubo = new Cubo();
-
-    //rotacion = leerPtrMatriz(agregar(EntradaNGE(MAT_Rotacion((tmin+tmax)/2.0,{0,1,0}))));
-
     agregar(EntradaNGE(MAT_Traslacion(1,0,1)));
-
     agregar(EntradaNGE(cubo));
-
-    
 }
 
 unsigned CuboAux::leerNumParametros() const{
@@ -261,33 +330,16 @@ unsigned CuboAux::leerNumParametros() const{
 
 void CuboAux::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
     assert(iParam<leerNumParametros());
-    float v1;
-    float vel_angular;
-    switch(iParam){
-        case 0:
-           
-            break;
-    }
-    
-    
 }
 
-
-
-
-
 VariosCubos::VariosCubos(int n,float tmin, float tmax, float T){
-   
    t_min = tmin;
    t_max = tmax;
    periodo = T;
 
    CuboAux * cubo = new CuboAux(tmin, tmax, T);
-
    agregar(EntradaNGE(MAT_Traslacion(-1,0,-1)));
-
    agregar(EntradaNGE(cubo));
-
 
    for(int i=0; i<n-1; i++){
       agregar(EntradaNGE(MAT_Traslacion(2,0,2)));
@@ -322,9 +374,6 @@ void VariosCubos::actualizarEstadoParametro( const unsigned iParam, const float 
                   *(rotacion[i]) = MAT_Rotacion(360-(90-v1),{0,1,0});
                }
             }
-            
             break;
     }
-    
-    
 }
