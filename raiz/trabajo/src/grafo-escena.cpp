@@ -300,7 +300,7 @@ bool NodoGrafoEscena::buscarObjeto
 // Práctica 4
 
 NodoCubo::NodoCubo(){
-   agregar(EntradaNGE(new Material(new Textura("../recursos/imgs/window-icon.jpg"),0.5,1,1,0.5)));
+   agregar(EntradaNGE(new Material(new Textura("../recursos/imgs/window-icon.jpg"),0.3,1,1,10)));
    agregar(EntradaNGE(new Cubo24()));
 }
 

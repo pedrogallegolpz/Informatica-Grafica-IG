@@ -116,8 +116,6 @@ class ContextoVis
    // suavizar aristas (y puntos) si/no 
    bool suavizar_aristas = false ;
 
-   
-
 
 
 };

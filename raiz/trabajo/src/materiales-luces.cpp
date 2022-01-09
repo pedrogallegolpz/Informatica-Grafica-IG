@@ -78,10 +78,11 @@ void Textura::activar( Cauce & cauce  )
 {
    // COMPLETADO: práctica 4: enviar la textura a la GPU (solo la primera vez) y activarla
    // .......
+
    if(!enviada){
       enviar();
    }
-   cauce.fijarEvalText(true, ident_textura);
+   cauce.fijarEvalText(enviada, ident_textura);
    cauce.fijarTipoGCT(modo_gen_ct, coefs_s, coefs_t);
 }
 // *********************************************************************
@@ -148,19 +149,23 @@ void Material::activar( ContextoVis & cv )
 {
    // COMPLETADO: práctica 4: activar un material
    // .....
+   
    if(textura!= nullptr){
       textura->activar(*cv.cauce_act);
+
+      assert(exp_pse>=1);
    }else{
       cv.cauce_act->fijarEvalText(false);    // Necesario para desactivar texturas previas en objetos actuales sin textura
    }
    Tupla3f mil_ka =Tupla3f(k_amb,k_amb,k_amb);
-   Tupla3f mil_kd = Tupla3f(k_amb,k_amb,k_amb);
-   Tupla3f mil_ks =Tupla3f(k_dif,k_dif,k_dif);
+   Tupla3f mil_kd = Tupla3f(k_dif,k_dif,k_dif);
+   Tupla3f mil_ks =Tupla3f(k_pse,k_pse,k_pse);
    cv.cauce_act->fijarParamsMIL(mil_ka, mil_kd, mil_ks, exp_pse);
    //cv.cauce_act->fijarEvalMIL(true); // Esto no se si hay que ponerlo
 
    // registrar el material actual en el cauce
    cv.material_act = this ; 
+   
 }
 //**********************************************************************
 
@@ -294,6 +299,8 @@ bool ProcesaTeclaFuenteLuz( ColFuentesLuz * col_fuentes, int glfw_key )
    switch( glfw_key )
    {
       case GLFW_KEY_RIGHT_BRACKET : // tecla '+' en el teclado normal
+         col_fuentes->sigAntFuente( +1 );
+         break ;
       case GLFW_KEY_KP_ADD :
          col_fuentes->sigAntFuente( +1 );
          break ;

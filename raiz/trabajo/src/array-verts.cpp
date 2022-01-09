@@ -186,19 +186,19 @@ void DescrTabla::fijarPuntero( const GLvoid * ptr_offset )
    //
    // .....
    switch(atributo){
-      case GL_VERTEX_ARRAY:
-         glVertexPointer(num_vals_tupla, tipo_valores, 0, ptr_offset);
-         break;
-      case GL_TEXTURE_COORD_ARRAY:
-         glTexCoordPointer(num_vals_tupla, tipo_valores, 0, ptr_offset);
-         break;
-      case GL_COLOR_ARRAY:
-         glColorPointer(num_vals_tupla, tipo_valores, 0, ptr_offset);
-         break;
-      case GL_NORMAL_ARRAY:
-         glNormalPointer( tipo_valores, 0, ptr_offset);
-         break;
-      }
+      case GL_VERTEX_ARRAY :
+         glVertexPointer( num_vals_tupla, tipo_valores, 0, ptr_offset );
+         break ;
+      case GL_TEXTURE_COORD_ARRAY :
+         glTexCoordPointer( num_vals_tupla, tipo_valores, 0, ptr_offset );
+         break ;
+      case GL_COLOR_ARRAY :
+         glColorPointer( num_vals_tupla, tipo_valores, 0, ptr_offset );
+         break ;
+      case GL_NORMAL_ARRAY :
+         glNormalPointer( tipo_valores, 0, ptr_offset );
+         break ;
+   }
 }
 
 // -----------------------------------------------------------------------------

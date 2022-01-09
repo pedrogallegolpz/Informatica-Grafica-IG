@@ -43,7 +43,12 @@ void MallaRevol::inicializar
    for(unsigned i=0; i<m-1; i++){
       // Normales
       Tupla3f v_aux = perfil[i+1]-perfil[i];
-      Tupla3f v(-v_aux(1),v_aux(0),0);    // Rotamos 90º
+      Tupla3f v(v_aux(1),-v_aux(0),0);    // Rotamos 90º en el sentido de las agujas del reloj
+
+      if(v(0)!=0 or v(1)!=0 or v(2)!=0){
+         v = v.normalized();
+      }
+
       nor_aristas.push_back(v);
 
       // Textura
@@ -56,7 +61,11 @@ void MallaRevol::inicializar
    perf_norver.push_back(nor_aristas[0]);
    for(unsigned i=1; i<nor_aristas.size(); i++){
       Tupla3f n = nor_aristas[i-1]+nor_aristas[i];
-      n.normalized();
+
+      if(n(0)!=0 or n(1)!=0 or n(2)!=0){
+         n = n.normalized();
+      }
+
       perf_norver.push_back(n);
    }
    perf_norver.push_back(nor_aristas[nor_aristas.size()-1]);
@@ -76,10 +85,15 @@ void MallaRevol::inicializar
    // Vértices
    for(unsigned i=0; i<num_copias; i++){
       for(int j=0; j<m; j++){
+         float theta = (2*PI*i)/(num_copias-1);
+         float seno = sin(theta);
+         float coseno = cos(theta);
+
+
          // P4 Normales
-         float x=perf_norver[j](0)*cos((2*PI*i)/(num_copias-1)),
+         float x=perf_norver[j](0)*seno,
                y=perf_norver[j](1),
-               z=perf_norver[j](0)*sin((2*PI*i)/(num_copias-1));   
+               z=perf_norver[j](0)*coseno;   
          
          Tupla3f q(x,y,z);
          nor_ver.push_back(q);
@@ -88,9 +102,9 @@ void MallaRevol::inicializar
          cc_tt_ver.push_back({1.0- ((float)i)/((float) num_copias-1), 1-t[j]});         
          
          // P2 Vértices
-         x=perfil[j](0)*cos((2*PI*i)/(num_copias-1));
+         x=perfil[j](0)*seno;
          y=perfil[j](1);
-         z=perfil[j](0)*sin((2*PI*i)/(num_copias-1));   // Usamos la componente X de perfil porque nos da "el radio"
+         z=perfil[j](0)*coseno;   // Usamos la componente X de perfil porque nos da "el radio"
          
          Tupla3f p(x,y,z);
          vertices.push_back(p);
@@ -149,7 +163,7 @@ Cilindro::Cilindro(
    
    // Base inferior: ponemos un punto en el perfil en el (0,0,0)
    Tupla3f base_inf(0,0,0);
-   perfil.push_back(base_inf);
+   //perfil.push_back(base_inf);
 
    // Puntos laterales del perfil que no son tapas
    for(unsigned i=0; i<num_verts_per-2; i++){     // Restamos dos por el vértice de la tapa y de la base
@@ -159,7 +173,7 @@ Cilindro::Cilindro(
 
    // Base superior: ponemos un punto en el perfil en el (0,1,0)
    Tupla3f base_sup(0,1,0);
-   perfil.push_back(base_sup);
+   //perfil.push_back(base_sup);
 
    inicializar(perfil, nperfiles);
 }
@@ -176,7 +190,7 @@ Cono::Cono(
    std::vector<Tupla3f> perfil;
    
    Tupla3f base_inf(0,0,0);
-   perfil.push_back(base_inf);
+   //perfil.push_back(base_inf);
 
    for(int i=0; i<num_verts_per-1; i++){
       Tupla3f p(1-((float) i)/((float) num_verts_per-2),((float) i)/((float) num_verts_per-2),0);

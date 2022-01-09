@@ -166,7 +166,7 @@ void FGE_PulsarLevantarTecla( GLFWwindow* window, int key, int scancode, int act
       // .....
 
       ColFuentesLuz * colfuentesluz = escenas[ind_escena_act]->colFuentes();
-
+      
       if(ProcesaTeclaFuenteLuz( colfuentesluz, key)){
          revisualizar_escena = true;
       }
@@ -302,7 +302,10 @@ void FGE_PulsarLevantarTecla( GLFWwindow* window, int key, int scancode, int act
 
 
       // COMPLETAR; Práctica 5. conmutar 'cv.visualizar_fbo' con la tecla 'Y'
-
+      case GLFW_KEY_Y:
+         cv.visualizar_fbo = !cv.visualizar_fbo;
+         cout << "viualizar_fbo : " << (cv.visualizar_fbo ? "activado" : "desactivado") << endl << flush ;
+         break;
 
       case GLFW_KEY_T :
          imprimir_tiempos = ! imprimir_tiempos ;

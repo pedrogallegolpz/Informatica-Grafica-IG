@@ -35,6 +35,31 @@ MallaInd::MallaInd( const std::string & nombreIni )
 }
 
 //-----------------------------------------------------------------------------
+// visualizar normales
+void MallaInd::visualizarNormales()
+{
+   using namespace std ;
+
+   if ( nor_ver.size() == 0 )
+   {
+      cout << "Advertencia: intentando dibujar normales de una malla que no tiene tabla (" << leerNombre() << ")." << endl ;
+      return ;
+   }  
+   if ( array_verts_normales == nullptr )
+   {  
+      for( unsigned i = 0 ; i < vertices.size() ; i++ )
+      {  
+         segmentos_normales.push_back( vertices[i] );
+         segmentos_normales.push_back( vertices[i]+ 0.35f*(nor_ver[i]) );
+      }
+      array_verts_normales = new ArrayVertices( GL_FLOAT, 3, segmentos_normales.size(), segmentos_normales.data() );
+   }
+
+   array_verts_normales->visualizarGL_MI_DAE( GL_LINES );
+   CError();
+}
+
+//-----------------------------------------------------------------------------
 // calcula la tabla de normales de triángulos una sola vez, si no estaba calculada
 
 void MallaInd::calcularNormalesTriangulos()
@@ -52,8 +77,8 @@ void MallaInd::calcularNormalesTriangulos()
    // COMPLETADO: Práctica 4: creación de la tabla de normales de triángulos
    // ....
    for(unsigned i=0; i<triangulos.size(); i++){
-      Tupla3f q = vertices[triangulos[i](0)];
-      Tupla3f p = vertices[triangulos[i](1)];
+      Tupla3f p = vertices[triangulos[i](0)];
+      Tupla3f q = vertices[triangulos[i](1)];
       Tupla3f r = vertices[triangulos[i](2)];
 
       Tupla3f a = q-p;
@@ -61,8 +86,8 @@ void MallaInd::calcularNormalesTriangulos()
 
       Tupla3f m = a.cross(b);
 
-      if(m(0)!=0 or m(0)!=0 or m(0)!=0){
-         m.normalized();
+      if(m(0)!=0 or m(1)!=0 or m(2)!=0){
+         m = m.normalized();
       }
 
       nor_tri.push_back(m);
@@ -89,8 +114,8 @@ void MallaInd::calcularNormales()
    }
 
    for(unsigned i=0; i<nor_ver.size(); i++){
-      if(nor_ver[i](0)!=0 or nor_ver[i](0)!=0 or nor_ver[i](0)!=0){
-         nor_ver[i].normalized();
+      if(nor_ver[i](0)!=0 or nor_ver[i](1)!=0 or nor_ver[i](2)!=0){
+         nor_ver[i] = nor_ver[i].normalized();
       }
    }
 
@@ -111,6 +136,11 @@ void MallaInd::visualizarGL( ContextoVis & cv )
 
    if ( triangulos.size() == 0 || vertices.size() == 0 )
    {  cout << "advertencia: intentando dibujar malla vacía '" << leerNombre() << "'" << endl << flush ;
+      return ;
+   }
+
+   if ( cv.visualizando_normales )
+   {  visualizarNormales(  );
       return ;
    }
 
@@ -214,6 +244,18 @@ Cubo::Cubo()
 
 
    triangulos =
+      {  {0,1,2}, {1,3,2}, // X-
+         {4,7,5}, {4,6,7}, // X+ (+4)
+
+         {0,4,1}, {1,4,5}, // Y-
+         {2,3,7}, {2,7,6}, // Y+ (+2)
+
+         {0,2,4}, {4,2,6}, // Z-
+         {1,5,7}, {1,7,3}  // Z+ (+1)
+      } ;
+
+   /*
+   triangulos =
       {  {0,1,3}, {0,3,2}, // X-
          {4,7,5}, {4,6,7}, // X+ (+4)
 
@@ -223,6 +265,7 @@ Cubo::Cubo()
          {0,6,4}, {0,2,6}, // Z-
          {1,5,7}, {1,7,3}  // Z+ (+1)
       } ;
+   */
 
    calcularNormales();
 }
@@ -387,6 +430,7 @@ CuboColores::CuboColores()
       } ;
 
 
+
    triangulos =
       {  {0,1,3}, {0,3,2}, // X-
          {4,7,5}, {4,6,7}, // X+ (+4)
@@ -401,12 +445,15 @@ CuboColores::CuboColores()
    // Colores
    for(unsigned i = 0; i<vertices.size(); i++){
       float a,b,c;
-      a=(vertices[i][0]+1)/2;
-      b=(vertices[i][1]+1)/2;
-      c=(vertices[i][2]+1)/2;
+      a=(vertices[i][0]+1.0)/2.0;
+      b=(vertices[i][1]+1.0)/2.0;
+      c=(vertices[i][2]+1.0)/2.0;
 
       col_ver.push_back({a,b,c});
    }
+
+   calcularNormales();
+
 }
 
 // -----------------------------------------------------------------------------------------------
@@ -439,7 +486,7 @@ EstrellaZ::EstrellaZ(unsigned n)
       col_ver.push_back(vertices[i]);
    }
 
-   
+   calcularNormales();  
 }
 
 // -----------------------------------------------------------------------------------------------
@@ -843,8 +890,11 @@ Casa::Casa(float h1, float h2, float w, float l)
    triangulos={
                   {0,1,4},{1,5,4},
                   {2,3,6},{3,7,6},
-                  {4,5,8},{5,8,9},
+                  {4,5,8},{5,9,8},
                   {6,7,9},{7,8,9}   };
+
+   calcularNormales();
+
    
    
 }

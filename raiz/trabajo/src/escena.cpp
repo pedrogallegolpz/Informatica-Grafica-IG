@@ -26,8 +26,9 @@ Escena::Escena()
    // COMPLETAR: Práctica 4: inicializar 'col_fuentes' y 'material_ini'
    // ...
    col_fuentes = new Col2Fuentes();
-   material_ini = new Material();
-
+   //material_ini = new Material();
+   material_ini = new Material(0.3, 1, 1, 10);
+   
    // COMPLETAR: Práctica 5: hacer 'push_back' de varias camaras perspectiva u ortogonales,
    // (sustituir la cámara orbital simple ('CamaraOrbitalSimple') por varias cámaras de 3 modos ('Camara3Modos')
    //camaras.push_back( new CamaraOrbitalSimple() );
@@ -37,6 +38,36 @@ Escena::Escena()
  
    // Por alguna razón no se puede poner de segundo parámetro {0.0,5.0,0.0}
 }
+
+// -----------------------------------------------------------------------------------------------
+// visualizar normales
+
+void Escena::visualizarNormales( ContextoVis & cv )
+{
+   // recuperar el objeto raiz de esta escena y comprobar que está ok.
+   bool ilum_ant = cv.iluminacion ;
+   assert( cv.cauce_act != nullptr );
+   Objeto3D * objeto = objetos[ind_objeto_actual] ; assert( objeto != nullptr );
+
+   // configurar el cauce:
+   cv.cauce_act->fijarEvalMIL( false );
+   cv.cauce_act->fijarEvalText( false );
+   cv.cauce_act->fijarModoSombrPlano( true ); // sombreado plano
+   glLineWidth( 1.5 ); // ancho de líneas (se queda puesto así)
+   glColor4f( 1.0, 0.7, 0.4, 1.0 ); // color de las normales
+
+   // configurar el contexto de visualizacion
+   cv.visualizando_normales = true ;   // hace que MallaInd::visualizarGL visualize las normales.
+   cv.iluminacion           = false ;
+
+   // visualizar objeto actual
+   objetos[ind_objeto_actual]->visualizarGL( cv );
+
+   // restaurar atributos cambiados en el contexto de visualización
+   cv.visualizando_normales = false ;
+   cv.iluminacion = ilum_ant ;
+}
+
 // -----------------------------------------------------------------------------------------------
 // visualiza la escena en la ventana actual, usando la configuración especificada en 'cv'
 
@@ -96,13 +127,13 @@ void Escena::visualizarGL( ContextoVis & cv )
       cauce->fijarEvalMIL(true);
       cauce->fijarEvalText(false);
 
-      if(col_fuentes != nullptr){
+      if(col_fuentes != nullptr)
          col_fuentes->activar(*cauce);
-      }      
-      if(material_ini != nullptr){
-         material_ini->activar(cv);
-      }
 
+      if(material_ini != nullptr){
+         cv.material_act=material_ini;
+         cv.material_act->activar(cv);
+      }
    }
    else // si la iluminación no está activada, deshabilitar MIL y texturas
    {  cauce->fijarEvalMIL( false );
@@ -114,6 +145,9 @@ void Escena::visualizarGL( ContextoVis & cv )
 
    // COMPLETAR: Práctica 1: visualizar el objeto actual ('objeto')
    objeto->visualizarGL(cv);
+
+   if ( cv.visualizar_normales && !cv.modo_seleccion )
+      visualizarNormales( cv );
 
 }
 
@@ -184,6 +218,7 @@ Escena1::Escena1()
 
    // añadir el objeto 'Cubo' a la lista de objetos de esta escena:
    objetos.push_back( new Cubo() );
+   objetos.push_back( new Cubo24() );
    
    // COMPLETADO: Práctica 1: creación del resto objetos de la práctica 1
    // Añadir objetos al vector 'objetos', con:
@@ -229,7 +264,7 @@ Escena2::Escena2()
    objetos.push_back( new Cilindro(10,20) );    
 
    // añadir el objeto 'Cono' a la lista de objetos de esta escena:
-   objetos.push_back( new Cono(3,20) );
+   objetos.push_back( new Cono(4,20) );
    
    // añadir el objeto 'Esfera' a la lista de objetos de esta escena:
    objetos.push_back( new Esfera(10,20) );
