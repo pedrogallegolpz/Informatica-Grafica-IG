@@ -88,6 +88,18 @@ Peones::Peones(){
 
     agregar(nodo_peon_madera);
 
+    //BORRAR
+    agregar(EntradaNGE(MAT_Traslacion(-1.9,0,0)));
+
+    NodoGrafoEscena * nodo_peon_madera2 = new NodoGrafoEscena();
+    nodo_peon_madera2->ponerNombre("Peón madera");
+    nodo_peon_madera2->ponerIdentificador(34322);    
+    nodo_peon_madera2->agregar(EntradaNGE( new Material(new Textura("../recursos/imgs/text-madera.jpg"),0.3,1,3,30.0) ));
+    nodo_peon_madera2->agregar(EntradaNGE(  new MallaRevolPLY("../recursos/plys/peon.ply",33) ));
+
+    agregar(nodo_peon_madera2);
+
+
 }
 
 

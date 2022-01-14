@@ -320,12 +320,19 @@ Escena4::Escena4()
 {
    using namespace std ;
    cout << "Creando objetos de escena 4 .... " << flush ;
-  
+    
+   // EXAMEN p4
+   objetos.push_back( new P4Nodo());
+
    // añadir el objeto LataPeones a la lista de objetos de esta escena:
    objetos.push_back( new LataPeones() );    
 
    // añadir el objeto NodoCubo a la lista de objetos de esta escena:
    objetos.push_back( new NodoCubo() );    
+
+
+   // EJER ADICIONAL
+   objetos.push_back( new NodoDiscoP4() );  
  
    cout << "hecho." << endl << flush ;
 }
@@ -342,8 +349,16 @@ Escena5::Escena5()
    using namespace std ;
    cout << "Creando objetos de escena 5 .... " << flush ;
   
+   // Examen P5
+   objetos.push_back(new P5Nodo());
+
    // añadir el objeto LataPeones a la lista de objetos de esta escena:
-   objetos.push_back( new VariasLatasPeones() );    
+   objetos.push_back( new VariasLatasPeones() );   
+
+   
+   // EJER ADICIONAL
+   objetos.push_back( new GrafoEsferasP5() );   
+   objetos.push_back( new GrafoEsferasP5_2() );   
  
    cout << "hecho." << endl << flush ;
 }

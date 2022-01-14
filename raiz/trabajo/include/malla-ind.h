@@ -250,6 +250,15 @@ class Adosadas : public MallaInd
 } ;
 
 
+// -------------------------------------------------------------------
+//EJERCICIO ADICIONAL P4
+class MallaDiscoP4 : public MallaInd
+{
+      public:
+            MallaDiscoP4(bool cuadricula);
+};
+
+
 
 
 

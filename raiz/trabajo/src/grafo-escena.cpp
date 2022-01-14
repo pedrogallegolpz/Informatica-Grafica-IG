@@ -24,6 +24,8 @@
 #include "matrices-tr.h"
 #include "grafo-escena.h"
 #include "malla-ind.h"
+#include "malla-revol.h"
+
 #define PI 3.14159265
 
 using namespace std ;
@@ -236,6 +238,7 @@ void NodoGrafoEscena::calcularCentroOC()
       centro = centro / ((float)num_objetos);    // Calculamos el punto medio
 
       ponerCentroOC(centro);
+   
 
       centro_calculado = true;
    }
@@ -377,3 +380,240 @@ void VariosCubos::actualizarEstadoParametro( const unsigned iParam, const float 
             break;
     }
 }
+
+
+
+
+
+///////////////////////////////////
+/// EJERCICIO ADICIONAL P4
+NodoDiscoP4::NodoDiscoP4(){
+   ponerNombre("Nodo ejercicio adicional práctica 4, examen 27 enero");
+   agregar(MAT_Traslacion(0,1.25,0));
+
+   agregar(EntradaNGE( new Material(new Textura("../recursos/imgs/cuadricula.jpg"),0.3,1,3,30.0) ));
+   agregar( new MallaDiscoP4(true) );
+   
+   agregar(MAT_Traslacion(0,-2.5,0));
+
+   agregar( new MallaDiscoP4(false) );
+
+}
+
+unsigned NodoDiscoP4::leerNumParametros() const{
+    return 0;
+}
+
+void NodoDiscoP4::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+}
+
+
+
+///////////////////////////////////
+/// EJERCICIO ADICIONAL P5
+GrafoEsferasP5::GrafoEsferasP5(){
+   const unsigned 
+      n_filas_esferas= 8,
+      n_esferas_x_fila= 5 ;
+   
+   const float
+      e = 0.4/n_esferas_x_fila ;
+
+   agregar( MAT_Escalado( e,e,e ));
+
+   for( unsigned i = 0 ; i < n_filas_esferas ; i++ ){
+      NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
+      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
+         Esfera * esfera = new Esfera(30,30) ;
+
+         //añadido
+         esfera->ponerIdentificador(5500+i*n_esferas_x_fila+j);
+         esfera->ponerNombre("esfera número "+std::to_string(i+1)+" de la fila número "+ std::to_string(j+1));
+         
+         
+         fila_esferas->agregar( MAT_Traslacion( 2.2, 0.0, 0.0 ));
+         fila_esferas->agregar( esfera );
+      }
+      agregar( fila_esferas );
+      agregar( MAT_Traslacion( 0.0, 0.0, 5.0 ));
+   }
+}
+
+
+unsigned GrafoEsferasP5::leerNumParametros() const{
+    return 0;
+}
+
+void GrafoEsferasP5::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+}
+
+
+GrafoEsferasP5_2::GrafoEsferasP5_2(){
+   const unsigned
+      n_filas_esferas= 8,
+      n_esferas_x_fila= 5 ;
+   const float e = 2.5/n_esferas_x_fila ;
+   
+   agregar( MAT_Escalado( e, e, e ));
+   
+   for( unsigned i = 0 ; i < n_filas_esferas ; i++ ){
+      NodoGrafoEscena * fila_esferas = new NodoGrafoEscena() ;
+      fila_esferas->agregar( MAT_Traslacion( 3.0, 0.0, 0.0 ));
+      for( unsigned j = 0 ; j < n_esferas_x_fila ; j++ ){
+         Esfera * esfera = new Esfera(30,30) ;
+
+         //añadido
+         esfera->ponerIdentificador(6500+i*n_esferas_x_fila+j);
+         esfera->ponerNombre("esfera número "+std::to_string(i+1)+" de la fila número "+ std::to_string(j+1));
+         
+         
+         fila_esferas->agregar( MAT_Traslacion( 2.5, 0.0, 0.0 ));
+         fila_esferas->agregar( esfera );
+      }
+      agregar( fila_esferas );
+      agregar( MAT_Rotacion( 360.0/n_filas_esferas, { 0.0, 1.0, 0.0 }));
+   }
+}
+
+unsigned GrafoEsferasP5_2::leerNumParametros() const{
+   return 0;
+}
+
+void GrafoEsferasP5_2::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////
+////            EXAMEN P45
+////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+P4Malla::P4Malla(){
+   ponerNombre("Malla examen práctica 4 (21-22)");
+    
+   vertices =
+      {   { 0.0, 1.0, 0.0 }, { +1.0, 0.0, +1.0  }, { +1.0, 0.0, -1.0 },  // mira hacia X+ e Y+
+         { 0.0, 1.0, 0.0 }, { -1.0, 0.0, -1.0  }, { -1.0, 0.0, +1.0 },  // mira hacia X- e Y+
+         { 0.0, 1.0, 0.0 }, { -1.0, 0.0, +1.0  }, { +1.0, 0.0, +1.0 },  // mira hacia Z+ e Y+
+         { 0.0, 1.0, 0.0 }, { +1.0, 0.0, -1.0  }, { -1.0, 0.0, -1.0 }   // mira hacia Z- e Y+
+      } ;
+
+   triangulos =
+      {  {0,1,2}, {3,4,5}, {6,7,8}, {9,10,11}
+      } ;
+
+
+   nor_tri =
+      {
+         {1.0/sqrt(2),1.0/sqrt(2),0.0},{-1.0/sqrt(2),1.0/sqrt(2),0.0},{0.0,1.0/sqrt(2),1.0/sqrt(2)},{0.0,1.0/sqrt(2),-1.0/sqrt(2)}
+      };
+
+   nor_ver =
+      {
+         {1.0/sqrt(2),1.0/sqrt(2),0.0},{1.0/sqrt(2),1.0/sqrt(2),0.0},{1.0/sqrt(2),1.0/sqrt(2),0.0},
+         {-1.0/sqrt(2),1.0/sqrt(2),0.0},{-1.0/sqrt(2),1.0/sqrt(2),0.0},{-1.0/sqrt(2),1.0/sqrt(2),0.0},
+         {0.0,1.0/sqrt(2),1.0/sqrt(2)},{0.0,1.0/sqrt(2),1.0/sqrt(2)},{0.0,1.0/sqrt(2),1.0/sqrt(2)},
+         {0.0,1.0/sqrt(2),-1.0/sqrt(2)},{0.0,1.0/sqrt(2),-1.0/sqrt(2)},{0.0,1.0/sqrt(2),-1.0/sqrt(2)}
+      };
+
+
+   // Textura
+   for(unsigned i=0; i<vertices.size(); i++){
+      if(i%3==0){
+         cc_tt_ver.push_back({0.5,1.0});
+      }else if(i%3==1){
+         cc_tt_ver.push_back({0.0,0.0});
+      }else{
+         cc_tt_ver.push_back({1.0,0.0});
+      }
+   }
+
+}
+
+
+
+
+
+P4Nodo::P4Nodo(){
+   agregar(EntradaNGE(new Material(new Textura("../recursos/imgs/textura-examen.jpg"),0.8,0.3,0.3,15)));
+   agregar(EntradaNGE(new P4Malla()));
+}
+
+unsigned P4Nodo::leerNumParametros() const{
+   return 0;
+}
+
+void P4Nodo::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+}
+
+
+
+////////////////////////////////////////////////////////////////////////
+P5Malla::P5Malla(){
+   ponerNombre("Malla examen práctica 5 (21-22)");
+    
+   vertices =
+      {  { 1.0, 1.0, 1.0 },  //Y+
+         { 1.0, 1.0, -1.0 }, 
+         { 1.0, -1.0, 1.0  }, // Y-
+         { 1.0, -1.0, -1.0 }   
+      } ;
+
+   triangulos =
+      {  {0,2,1},{1,2,3}
+      } ;
+
+   nor_tri ={{1.0,0.0,0.0},{1.0,0.0,0.0}};
+   nor_ver={{1.0,0.0,0.0},{1.0,0.0,0.0},{1.0,0.0,0.0},{1.0,0.0,0.0}};
+
+   ponerCentroOC({1.0,0.0,0.0});
+}
+
+
+
+
+P5Nodo::P5Nodo(){
+   /*
+      0 -> Este X+
+      1 -> Norte Z-
+      2 -> Oeste X-
+      3 -> Sur Z+
+   */
+   P5Malla * malla = new P5Malla();
+   malla->ponerIdentificador(4500);  
+   agregar(EntradaNGE(malla));
+
+   agregar(EntradaNGE(MAT_Rotacion(90,{0,1,0})));
+
+   malla = new P5Malla();
+   malla->ponerIdentificador(4501);  
+   agregar(EntradaNGE(malla));
+
+
+   agregar(EntradaNGE(MAT_Rotacion(90,{0,1,0})));
+
+   malla = new P5Malla();
+   malla->ponerIdentificador(4502);  
+   agregar(EntradaNGE(malla));
+
+
+   agregar(EntradaNGE(MAT_Rotacion(90,{0,1,0})));
+
+   malla = new P5Malla();
+   malla->ponerIdentificador(4503);  
+   agregar(EntradaNGE(malla));
+   
+}
+
+unsigned P5Nodo::leerNumParametros() const{
+   return 0;
+}
+
+void P5Nodo::actualizarEstadoParametro( const unsigned iParam, const float t_sec ){
+}
+

@@ -157,6 +157,7 @@ Dron::Dron(){
     compuerta.push_back(new CompuertaEngranada(1));
     compuerta.push_back(new CompuertaEngranada(2));
     compuerta.push_back(new CompuertaEngranada(3));
+    agregar(EntradaNGE( new Material(0.3,1,1,40.0) ));
     for(unsigned i=0; i<compuerta.size(); i++){
         compuerta[i]->ponerColor({0.2,0.2,0.2});
         agregar(EntradaNGE(compuerta[i]));
@@ -168,6 +169,7 @@ Dron::Dron(){
     brazo.push_back(new BrazoDron(315));
     brazo.push_back(new BrazoDron(225));
     brazo.push_back(new BrazoDron(135));
+    agregar(EntradaNGE( new Material(0.3,2,4,20.0) ));
     for(unsigned i=0; i<brazo.size(); i++){
         agregar(EntradaNGE(brazo[i]));
     }
@@ -214,7 +216,8 @@ Carga::Carga(){
 
     // Creamos el cubo (carga)
     agregar(EntradaNGE(MAT_Escalado(0.09,0.09,0.09)));   // Hacemos el cuadrado suficientemente pequeño para que quepa por la compuerta. Con esto la cuerda tiene longitud 2 (como máximo)
-    Cubo *c = new Cubo();
+    agregar(EntradaNGE( new Material(new Textura("../recursos/imgs/textura-lamas-madera.jpg"),0.3,0.5,0.5,30.0) ));
+    Cubo24 *c = new Cubo24();
     c->ponerColor({0.7,0.1,0.1});
     agregar(EntradaNGE(c));
     
@@ -226,9 +229,10 @@ Carga::Carga(){
 
     // Creamos la cuerda
     TuboPrisma *p = new TuboPrisma(5);
-    p->ponerColor({0.6,0.3,0});
+    p->ponerColor({0.76,0.56,0.43});
     p->ponerNombre("Cuerda");
     p->ponerIdentificador(103);
+    agregar(EntradaNGE( new Material(0.3,3,1,30.0) ));
     agregar(EntradaNGE(p));
 
 }

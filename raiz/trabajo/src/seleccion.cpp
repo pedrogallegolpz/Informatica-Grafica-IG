@@ -129,7 +129,12 @@ bool Seleccion( int x, int y, Escena * escena, ContextoVis & cv_dib )
    // ....
    if(idpxl == 0){
       cout << "\nCUIDADO: El identificador del píxel es 0, luego el objeto no es seleccionable.\n ";
-      return false;
+
+      // Examen P5
+      escena->camaraActual()->mirarHacia({0.0,0.0,0.0});
+
+
+      return true;
    }
 
    // 9. Buscar el objeto en el objeto_raiz (puede ser un grafo de escena)
@@ -138,7 +143,7 @@ bool Seleccion( int x, int y, Escena * escena, ContextoVis & cv_dib )
    // .....
    Matriz4f mmodelado = MAT_Ident();
    Objeto3D ** objeto = new Objeto3D*; 
-   Tupla3f centro_wc;
+   Tupla3f centro_wc={0.0,0.0,0.0};
 
    bool existe = escena->objetoActual()->buscarObjeto(idpxl, mmodelado, objeto, centro_wc);
 
@@ -147,7 +152,31 @@ bool Seleccion( int x, int y, Escena * escena, ContextoVis & cv_dib )
       return false;
    }
 
-   cout << "\nSe ha seleccionado el objeto "<< (*objeto)->leerNombre() << " (id: "<< (*objeto)->leerIdentificador() << ")\n";
+   // P5 adicional
+   if(idpxl>=5500){        // Es una esfera del ejercicio adicional
+      cout << "\nSe ha seleccionado la "<< (*objeto)->leerNombre() << "\n";
+   }else if(idpxl>=4500){
+      /*
+         0 -> Este X+
+         1 -> Norte Z-
+         2 -> Oeste X-
+         3 -> Sur Z+
+      */
+      if(idpxl==4500){
+         cout << "\nEste (X+)"<<"\n";
+      }
+      if(idpxl==4501){
+         cout << "\nNorte (Z-)"<<"\n";
+      }
+      if(idpxl==4502){
+         cout << "\nOeste (X-)"<<"\n";
+      }
+      if(idpxl==4503){
+         cout << "\nSur (Z+)"<<"\n";
+      }
+   }else{
+      cout << "\nSe ha seleccionado el objeto "<< (*objeto)->leerNombre() << " (id: "<< (*objeto)->leerIdentificador() << ")\n";
+   }
 
    escena->camaraActual()->mirarHacia(centro_wc);
 

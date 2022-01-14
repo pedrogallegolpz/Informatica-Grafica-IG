@@ -30,6 +30,7 @@
 #include "matrices-tr.h"
 #include "objeto3d.h"
 #include "materiales-luces.h"
+#include "malla-ind.h"
 
 
 // *********************************************************************
@@ -145,6 +146,109 @@ class VariosCubos : public NodoGrafoEscena
     public:
 
         VariosCubos(int n, float tmin, float tmax, float T);
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+// Ejer adicional P4
+
+class NodoDiscoP4 : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        NodoDiscoP4();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+
+// Ejer adicional P5
+
+class GrafoEsferasP5 : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        GrafoEsferasP5();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+
+class GrafoEsferasP5_2 : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        GrafoEsferasP5_2();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////
+////            EXAMEN P45
+////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+class P4Malla: public MallaInd{
+    public:
+        P4Malla();
+};
+
+
+
+class P4Nodo : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        P4Nodo();
+
+        unsigned leerNumParametros() const ;
+
+        void actualizarEstadoParametro( const unsigned iParam, const float t_sec );
+
+
+};
+
+////////////////////////////////////////////////////////////////////////
+class P5Malla: public MallaInd{
+    public:
+        P5Malla();
+};
+
+
+class P5Nodo : public NodoGrafoEscena
+{
+    private:
+
+    public:
+
+        P5Nodo();
 
         unsigned leerNumParametros() const ;
 

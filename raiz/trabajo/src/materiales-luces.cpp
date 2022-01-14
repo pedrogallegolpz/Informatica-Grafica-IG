@@ -90,11 +90,30 @@ void Textura::activar( Cauce & cauce  )
 TexturaXY::TexturaXY( const std::string & nom ):Textura(nom){
    //Práctica 4: implementar constructor de Textura XY
    modo_gen_ct = mgct_coords_objeto;
+   coefs_s[0]=1.0;
+   coefs_s[1]=0.0;
+   coefs_s[2]=0.0;
+   coefs_s[3]=0.0;
+
+   coefs_t[0]=0.0;
+   coefs_t[1]=1.0;
+   coefs_t[2]=0.0;
+   coefs_t[3]=0.0;
+   
 }// *********************************************************************
 
 TexturaXZ::TexturaXZ( const std::string & nom ):Textura(nom){
-   //Práctica 4: implementar constructor de Textura XY
-   modo_gen_ct = mgct_coords_ojo;
+   //Práctica 4: implementar constructor de Textura XZ
+   modo_gen_ct = mgct_coords_objeto;
+   coefs_s[0]=1.0;
+   coefs_s[1]=0.0;
+   coefs_s[2]=0.0;
+   coefs_s[3]=0.0;
+
+   coefs_t[0]=0.0;
+   coefs_t[1]=0.0;
+   coefs_t[2]=1.0;
+   coefs_t[3]=0.0;
 }
 
 // *********************************************************************
