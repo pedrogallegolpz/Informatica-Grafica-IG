@@ -34,7 +34,7 @@ Estas prácticas han sido realizadas en LINUX.
 
 - Tener instalado **g++**
 - **Librería Glew**      `sudo apt install libglew-dev`
-- **Librería GLFW **     `sudo apt install libglfw3-dev`
+- **Librería GLFW**     `sudo apt install libglfw3-dev`
 - **Librería JPEG**     `sudo apt install libjpeg-dev`
 
 
