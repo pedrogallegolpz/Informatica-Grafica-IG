@@ -72,3 +72,5 @@ Todo esto se consigue a partir de una base de modelos simples de mallas. La prá
 > en caso de cambiar la primitiva todos los modelos e incluso algunos métodos deberían de ser modificados
 
 En el desarrollo de esta práctica se propone crear un  modelo jerárquico propio que contenga varios grados de libertad. En el caso de este repositorio el modelo creado es un **dron** que *carga y descarga mercancía de una caja* (hélices, movimiento del dron, apertura y cierre de compuertas y subida y bajada de la carga). La imagen del dron:
+
+![Alt text](https://github.com/pedrogallegolpz/Informatica-Grafica-IG/blob/master/dron_opengl.png "Dron de carga con texturas")
